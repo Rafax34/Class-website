@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Class 2-B Website — Schedule, rules, members, and announcements">
+  <meta property="og:title" content="Class 2-B">
+  <meta property="og:description" content="Our class website — schedule, rules, members, and updates">
+  <meta property="og:type" content="website">
+  <title>Class 2-B</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-brand">Class 2-B</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span class="hamburger"></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#structure">Structure</a></li>
+        <li><a href="#rules">Rules</a></li>
+        <li><a href="#schedule">Schedule</a></li>
+        <li><a href="#announcements">Announcements</a></li>
+        <li><a href="#members">Members</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <section id="hero" class="hero">
+      <div class="hero-content">
+        <h1>Class 2-B</h1>
+        <p class="tagline">2025–2026 Academic Year · Homeroom 204</p>
+        <div class="hero-photo" aria-hidden="true">
+          <svg viewBox="0 0 300 200" class="placeholder-img">
+            <rect fill="#1a1a2e" width="300" height="200"/>
+            <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#4a4a6a" font-family="Space Grotesk" font-size="14">Class Photo</text>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section id="structure" class="section">
+      <header class="section-header">
+        <h2>Class Structure</h2>
+        <p>Our leadership team for the year</p>
+      </header>
+      <div class="org-chart" id="orgChart">
+        <!-- Rendered by JS -->
+      </div>
+    </section>
+
+    <section id="rules" class="section">
+      <header class="section-header">
+        <h2>Class Rules</h2>
+        <p>Guidelines that keep our class running smoothly</p>
+      </header>
+      <div class="accordion" id="rulesAccordion">
+        <!-- Rendered by JS -->
+      </div>
+    </section>
+
+    <section id="schedule" class="section">
+      <header class="section-header">
+        <h2>Weekly Schedule</h2>
+        <p>Mon–Fri, Periods 1–7</p>
+      </header>
+      <div class="schedule-table-wrap">
+        <table class="schedule-table" id="scheduleTable">
+          <thead>
+            <tr>
+              <th>Time / Day</th>
+              <th>Mon</th>
+              <th>Tue</th>
+              <th>Wed</th>
+              <th>Thu</th>
+              <th>Fri</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Rendered by JS -->
+          </tbody>
+        </table>
+      </div>
+      <div class="schedule-cards" id="scheduleCards" aria-hidden="true">
+        <!-- Mobile card layout rendered by JS -->
+      </div>
+    </section>
+
+    <section id="announcements" class="section">
+      <header class="section-header">
+        <h2>Announcements</h2>
+        <p>Latest updates and reminders</p>
+      </header>
+      <ul class="announcements-list" id="announcementsList">
+        <!-- Rendered by JS -->
+      </ul>
+    </section>
+
+    <section id="members" class="section">
+      <header class="section-header">
+        <h2>Members</h2>
+        <p>Our class family</p>
+      </header>
+      <div class="members-grid" id="membersGrid">
+        <!-- Rendered by JS -->
+      </div>
+    </section>
+
+    <section id="contact" class="section contact">
+      <header class="section-header">
+        <h2>Contact</h2>
+        <p>Get in touch</p>
+      </header>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <h3>Class Group Chat</h3>
+          <a href="[EDIT ME: Group chat link]" class="contact-link" target="_blank" rel="noopener">Join on [Platform]</a>
+        </div>
+        <div class="contact-card">
+          <h3>Email</h3>
+          <a href="mailto:[EDIT ME: class email]" class="contact-link">[EDIT ME: class email]</a>
+        </div>
+        <div class="contact-card">
+          <h3>Homeroom</h3>
+          <p class="contact-text">Room 204, Building B</p>
+        </div>
+      </div>
+      <div class="footer-meta">
+        <p>Last updated: <span id="lastUpdated">[EDIT ME: date]</span></p>
+        <p>Built for GitHub Pages · <a href="https://github.com/[EDIT ME: username]/[EDIT ME: repo]" target="_blank" rel="noopener">View source</a></p>
+      </div>
+    </section>
+  </main>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" hidden>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M18 15l-6-6-6 6"/>
+    </svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
