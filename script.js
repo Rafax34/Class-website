@@ -1,84 +1,229 @@
+// ===== TRANSLATIONS =====
+const translations = {
+  // Nav
+  'nav-home': { id: 'Beranda', en: 'Home' },
+  'nav-structure': { id: 'Struktur', en: 'Structure' },
+  'nav-rules': { id: 'Aturan', en: 'Rules' },
+  'nav-schedule': { id: 'Jadwal', en: 'Schedule' },
+  'nav-teachers': { id: 'Guru', en: 'Teachers' },
+  'nav-cleaning': { id: 'Piket', en: 'Cleaning' },
+  'nav-announcements': { id: 'Pengumuman', en: 'Announcements' },
+  'nav-members': { id: 'Anggota', en: 'Members' },
+  'nav-location': { id: 'Lokasi', en: 'Location' },
+
+  // Section headers
+  'hero-tagline': { id: 'Tahun Ajaran 2025–2026 · Wali Kelas X-D', en: '2025–2026 Academic Year · Homeroom X-D' },
+  'structure-title': { id: 'Struktur Kelas', en: 'Class Structure' },
+  'structure-subtitle': { id: 'Tim pengurus kelas kami', en: 'Our leadership team for the year' },
+  'rules-title': { id: 'Aturan Kelas', en: 'Class Rules' },
+  'rules-subtitle': { id: 'Pedoman yang menjaga kelancaran kelas', en: 'Guidelines that keep our class running smoothly' },
+  'schedule-title': { id: 'Jadwal Mingguan', en: 'Weekly Schedule' },
+  'schedule-subtitle': { id: 'Sen–Jum, Jam 1–7', en: 'Mon–Fri, Periods 1–7' },
+  'teachers-title': { id: 'Guru', en: 'Teachers' },
+  'teachers-subtitle': { id: 'Guru mata pelajaran kami', en: 'Our subject teachers' },
+  'cleaning-title': { id: 'Jadwal Piket', en: 'Cleaning Schedule' },
+  'cleaning-subtitle': { id: 'Tugas piket mingguan', en: 'Weekly class cleaning duties' },
+  'announcements-title': { id: 'Pengumuman', en: 'Announcements' },
+  'announcements-subtitle': { id: 'Informasi dan pengingat terbaru', en: 'Latest updates and reminders' },
+  'members-title': { id: 'Anggota', en: 'Members' },
+  'members-subtitle': { id: 'Keluarga kelas kami', en: 'Our class family' },
+  'location-title': { id: 'Lokasi', en: 'Location' },
+  'location-subtitle': { id: 'Temukan kami di sini', en: 'Find us here' },
+  'location-room': { id: 'Wali Kelas', en: 'Homeroom' },
+  'location-room-text': { id: 'Gedung B, Ruang X-D', en: 'Building B, Room X-D' },
+  'last-updated': { id: 'Terakhir diperbarui:', en: 'Last updated:' },
+
+  // Roles
+  'role-homeroom': { id: 'Wali Kelas', en: 'Homeroom Teacher' },
+  'role-president': { id: 'Ketua Kelas', en: 'Class President' },
+  'role-vice': { id: 'Wakil Ketua', en: 'Vice President' },
+  'role-secretary': { id: 'Sekretaris', en: 'Secretary' },
+  'role-treasurer': { id: 'Bendahara', en: 'Treasurer' },
+  'role-academic': { id: 'Koordinator Akademik', en: 'Academic Committee' },
+  'role-sports': { id: 'Koordinator Olahraga', en: 'Sports Committee' },
+  'role-cultural': { id: 'Koordinator Kesenian', en: 'Cultural Committee' },
+  'role-member': { id: 'Anggota', en: 'Member' },
+
+  // Schedule subjects
+  'subject-upacara': { id: 'Upacara', en: 'Ceremony' },
+  'subject-senam': { id: 'Senam Pagi', en: 'Morning Exercise' },
+  'subject-istirahat': { id: 'Istirahat', en: 'Break' },
+  'subject-indonesia': { id: 'Bahasa Indonesia', en: 'Indonesian' },
+  'subject-math': { id: 'Matematika', en: 'Mathematics' },
+  'subject-physics': { id: 'Fisika', en: 'Physics' },
+  'subject-chembio': { id: 'Kimia/Biologi', en: 'Chemistry/Biology' },
+  'subject-bio': { id: 'Biologi', en: 'Biology' },
+  'subject-pancasila': { id: 'Pendidikan Pancasila', en: 'Civics' },
+  'subject-informatics': { id: 'Informatika', en: 'Informatics' },
+  'subject-sociology': { id: 'Sosiologi', en: 'Sociology' },
+  'subject-pjok': { id: 'PJOK', en: 'PE' },
+  'subject-economy': { id: 'Ekonomi/PKWU', en: 'Economics' },
+  'subject-music': { id: 'Seni Musik', en: 'Music' },
+  'subject-english': { id: 'Bahasa Inggris', en: 'English' },
+  'subject-islam': { id: 'Pendidikan Agama Islam', en: 'Islamic Studies' },
+  'subject-history': { id: 'Sejarah', en: 'History' },
+  'subject-histgeo': { id: 'Sejarah/Geografi', en: 'History/Geography' },
+
+  // Rules categories
+  'rules-attendance': { id: 'Kehadiran', en: 'Attendance' },
+  'rules-conduct': { id: 'Tingkah Laku', en: 'Conduct' },
+  'rules-assignments': { id: 'Tugas', en: 'Assignments' },
+  'rules-classroom': { id: 'Kelas', en: 'Classroom' },
+
+  // Rules items
+  'rule-1': { id: 'Wajib izin kepada wali kelas jika tidak masuk atau terlambat.', en: 'Must inform homeroom teacher if absent or late.' },
+  'rule-2': { id: 'Ucapkan salam sebelum dan sesudah pelajaran.', en: 'Say greetings before and after lessons.' },
+  'rule-3': { id: 'Wajib membawa botol minum, kotak makan, dan alat sholat setiap hari.', en: 'Must bring water bottle, lunch box, and prayer tools every day.' },
+  'rule-4': { id: 'Bersikap sopan dan santun kepada seluruh warga sekolah.', en: 'Be polite and respectful to all school members.' },
+  'rule-5': { id: 'Tidak boleh mengambil barang yang bukan miliknya.', en: 'Must not take things that do not belong to you.' },
+  'rule-6': { id: 'Dilarang pacaran sekelas.', en: 'No dating within the class.' },
+  'rule-7': { id: 'Dilarang berkelompok atau membuat sirkel sendiri di X-D.', en: 'No forming exclusive groups or cliques in X-D.' },
+  'rule-8': { id: 'Saling mengingatkan jika ada tugas atau ulangan.', en: 'Remind each other about assignments or tests.' },
+  'rule-9': { id: 'Jika tidak piket, diganti hari selanjutnya.', en: 'If absent from cleaning duty, must make up the next day.' },
+  'rule-10': { id: 'Semua siswa X-D wajib menjaga kebersihan kelas.', en: 'All X-D students must keep the classroom clean.' },
+
+  // Days
+  'day-mon': { id: 'Senin', en: 'Monday' },
+  'day-tue': { id: 'Selasa', en: 'Tuesday' },
+  'day-wed': { id: 'Rabu', en: 'Wednesday' },
+  'day-thu': { id: 'Kamis', en: 'Thursday' },
+  'day-fri': { id: 'Jumat', en: 'Friday' },
+};
+
+// Current language
+let currentLang = 'id';
+
+function t(key) {
+  return translations[key]?.[currentLang] || key;
+}
+
 // ===== DATA =====
 const orgData = [
-  { role: 'Homeroom Teacher', name: '[EDIT ME: Teacher Name]', photo: null },
-  { role: 'Class President', name: '[EDIT ME: President Name]', photo: null },
-  { role: 'Vice President', name: '[EDIT ME: VP Name]', photo: null },
-  { role: 'Secretary', name: '[EDIT ME: Secretary Name]', photo: null },
-  { role: 'Treasurer', name: '[EDIT ME: Treasurer Name]', photo: null },
-  { role: 'Academic Committee', name: '[EDIT ME: Head Name]', photo: null },
-  { role: 'Sports Committee', name: '[EDIT ME: Head Name]', photo: null },
-  { role: 'Cultural Committee', name: '[EDIT ME: Head Name]', photo: null },
+  { roleKey: 'role-homeroom', name: '[EDIT ME: Teacher Name]', photo: null },
+  { roleKey: 'role-president', name: '[EDIT ME: President Name]', photo: null },
+  { roleKey: 'role-vice', name: '[EDIT ME: VP Name]', photo: null },
+  { roleKey: 'role-secretary', name: '[EDIT ME: Secretary Name]', photo: null },
+  { roleKey: 'role-treasurer', name: '[EDIT ME: Treasurer Name]', photo: null },
+  { roleKey: 'role-academic', name: '[EDIT ME: Head Name]', photo: null },
+  { roleKey: 'role-sports', name: '[EDIT ME: Head Name]', photo: null },
+  { roleKey: 'role-cultural', name: '[EDIT ME: Head Name]', photo: null },
 ];
 
 const rulesData = [
   {
-    category: 'Attendance',
-    items: [
-      'Arrive before 8:00 AM; late arrivals require a pass.',
-      'Notify the teacher by 7:30 AM for any absence.',
-      'Three unexcused lates = one absence on record.',
-    ],
+    categoryKey: 'rules-attendance',
+    itemKeys: ['rule-1'],
   },
   {
-    category: 'Conduct',
-    items: [
-      'Respect peers, teachers, and school property at all times.',
-      'Phones on silent and stored during lessons unless permitted.',
-      'No bullying, harassment, or discriminatory language — zero tolerance.',
-    ],
+    categoryKey: 'rules-conduct',
+    itemKeys: ['rule-2', 'rule-3', 'rule-4', 'rule-5', 'rule-6', 'rule-7'],
   },
   {
-    category: 'Assignments',
-    items: [
-      'Submit work by the due date; late work capped at 80% after 1 day.',
-      'Ask for extensions at least 24 hours before the deadline.',
-      'Group work: contribute fairly; freeriding affects everyone\'s grade.',
-    ],
+    categoryKey: 'rules-assignments',
+    itemKeys: ['rule-8'],
   },
   {
-    category: 'Classroom',
-    items: [
-      'Keep the room clean; tidy your area before leaving.',
-      'Raise hand to speak; listen when others are talking.',
-      'Food only during breaks; water allowed anytime.',
-    ],
+    categoryKey: 'rules-classroom',
+    itemKeys: ['rule-9', 'rule-10'],
   },
 ];
 
 const scheduleData = [
-  { time: '8:00–8:50', mon: 'Math', tue: 'English', wed: 'Science', thu: 'History', fri: 'PE' },
-  { time: '8:55–9:45', mon: 'Science', tue: 'Math', wed: 'English', thu: 'Art', fri: 'History' },
-  { time: '9:50–10:40', mon: 'English', tue: 'History', wed: 'Math', thu: 'Science', fri: 'Music' },
-  { time: '10:40–11:00', mon: 'Break', tue: 'Break', wed: 'Break', thu: 'Break', fri: 'Break' },
-  { time: '11:00–11:50', mon: 'History', tue: 'Science', wed: 'PE', thu: 'Math', fri: 'English' },
-  { time: '11:55–12:45', mon: 'Art', tue: 'PE', wed: 'History', thu: 'English', fri: 'Science' },
-  { time: '12:45–13:30', mon: 'Lunch', tue: 'Lunch', wed: 'Lunch', thu: 'Lunch', fri: 'Lunch' },
-  { time: '13:30–14:20', mon: 'PE', tue: 'Art', wed: 'Music', thu: 'Free', fri: 'Class Meeting' },
-  { time: '14:25–15:15', mon: 'Free', tue: 'Free', wed: 'Free', thu: 'Free', fri: 'Free' },
+  { time: '07:00–07:45', mon: 'subject-upacara', tue: 'subject-math', wed: 'subject-physics', thu: 'subject-chembio', fri: 'subject-senam' },
+  { time: '07:45–08:30', mon: 'subject-indonesia', tue: 'subject-math', wed: 'subject-physics', thu: 'subject-chembio', fri: 'subject-senam' },
+  { time: '08:30–09:15', mon: 'subject-indonesia', tue: 'subject-pancasila', wed: 'subject-physics', thu: 'subject-chembio', fri: 'subject-pjok' },
+  { time: '09:15–10:00', mon: 'subject-indonesia', tue: 'subject-pancasila', wed: 'subject-informatics', thu: 'subject-sociology', fri: 'subject-pjok' },
+  { time: '10:00–10:15', mon: 'subject-istirahat', tue: 'subject-istirahat', wed: 'subject-istirahat', thu: 'subject-istirahat', fri: 'subject-istirahat' },
+  { time: '10:15–11:00', mon: 'subject-economy', tue: 'subject-bio', wed: 'subject-informatics', thu: 'subject-sociology', fri: 'subject-music' },
+  { time: '11:00–11:45', mon: 'subject-economy', tue: 'subject-bio', wed: 'subject-math', thu: 'subject-sociology', fri: 'subject-music' },
+  { time: '11:45–12:30', mon: 'subject-economy', tue: 'subject-bio', wed: 'subject-math', thu: 'subject-english', fri: '-' },
+  { time: '12:30–13:00', mon: 'subject-istirahat', tue: 'subject-istirahat', wed: 'subject-istirahat', thu: 'subject-istirahat', fri: '-' },
+  { time: '13:00–13:45', mon: 'subject-islam', tue: 'subject-histgeo', wed: 'subject-history', thu: 'subject-english', fri: '-' },
+  { time: '13:45–14:30', mon: 'subject-islam', tue: 'subject-histgeo', wed: 'subject-history', thu: 'subject-english', fri: '-' },
+  { time: '14:30–15:15', mon: 'subject-islam', tue: 'subject-histgeo', wed: 'subject-history', thu: '-', fri: '-' },
 ];
 
 const announcementsData = [
-  { title: 'Midterm Exam Schedule Released', date: '2025-10-15', text: 'Check the schedule section for dates. Study sessions Mon/Wed 3:30–4:30 PM in Room 204.' },
+  { title: 'Midterm Exam Schedule Released', date: '2025-10-15', text: 'Check the schedule section for dates. Study sessions Mon/Wed 3:30–4:30 PM in Room X-D.' },
   { title: 'Field Trip to Science Museum', date: '2025-10-08', text: 'Permission slips due by Oct 20. Cost: $15. Lunch provided.' },
-  { title: 'Parent-Teacher Conferences', date: '2025-10-01', text: 'Nov 3–5. Sign up via the class group chat link in Contact.' },
+  { title: 'Parent-Teacher Conferences', date: '2025-10-01', text: 'Nov 3–5. Sign up via the class group chat link in Location.' },
   { title: 'New Club Sign-ups Open', date: '2025-09-25', text: 'Robotics, Debate, and Photography clubs accepting members until Sep 30.' },
-  { title: 'Welcome to Class 2-B!', date: '2025-09-01', text: 'Excited for a great year together. Introduce yourself in the group chat!' },
+  { title: 'Welcome to Class X-D!', date: '2025-09-01', text: 'Excited for a great year together. Introduce yourself in the group chat!' },
 ];
 
-const membersData = Array.from({ length: 24 }, (_, i) => ({
-  name: `[EDIT ME: Student ${i + 1}]`,
-  role: i < 8 ? 'Officer' : 'Member',
-  photo: null,
-}));
+const membersData = [
+  { name: 'Al Fathan Kurniawan', roleKey: 'role-member', photo: null },
+  { name: 'Ali Al-Khalili', roleKey: 'role-member', photo: null },
+  { name: 'Alin Qistina Ningabhia', roleKey: 'role-member', photo: null },
+  { name: 'Alvin Askaresky', roleKey: 'role-member', photo: null },
+  { name: 'Alvina Angelicha Nhovarinda', roleKey: 'role-member', photo: null },
+  { name: 'Alvino Diendra', roleKey: 'role-member', photo: null },
+  { name: 'Asyifha Dwiharti', roleKey: 'role-member', photo: null },
+  { name: 'Cyndi Vanecya Aurha', roleKey: 'role-member', photo: null },
+  { name: 'Devita Maharani', roleKey: 'role-member', photo: null },
+  { name: 'Dinara Indi Hartono', roleKey: 'role-member', photo: null },
+  { name: 'Dyarum Clarisya', roleKey: 'role-member', photo: null },
+  { name: 'Elgita Cherly Prabella', roleKey: 'role-member', photo: null },
+  { name: 'Eliza Rahmi', roleKey: 'role-member', photo: null },
+  { name: 'Farel Saputra', roleKey: 'role-member', photo: null },
+  { name: 'Fartillah Suci Zakhia', roleKey: 'role-member', photo: null },
+  { name: 'Happy Qorri Aina', roleKey: 'role-member', photo: null },
+  { name: 'Hari Kurniawan', roleKey: 'role-member', photo: null },
+  { name: 'Indah Amelia', roleKey: 'role-member', photo: null },
+  { name: 'Indira Cahaya Rabbani', roleKey: 'role-member', photo: null },
+  { name: 'Khairulil Abrar', roleKey: 'role-member', photo: null },
+  { name: 'Meita Hafiza', roleKey: 'role-member', photo: null },
+  { name: 'Muhammad Ary Azhari', roleKey: 'role-member', photo: null },
+  { name: 'Muhammad Baihaqi Akram', roleKey: 'role-member', photo: null },
+  { name: 'Muhammad Deron Phaedra Al-Bahy', roleKey: 'role-member', photo: null },
+  { name: 'Mutiara Revina Kurniawan', roleKey: 'role-member', photo: null },
+  { name: 'Naufal Ardian Rafizal', roleKey: 'role-member', photo: null },
+  { name: 'Nayaka Putri Effie', roleKey: 'role-member', photo: null },
+  { name: 'Novtafiani', roleKey: 'role-member', photo: null },
+  { name: 'Rafa Aydinfadhilah', roleKey: 'role-member', photo: null },
+  { name: 'Refi Leytisaputri', roleKey: 'role-member', photo: null },
+  { name: 'Rista Istiqomah', roleKey: 'role-member', photo: null },
+  { name: 'Salsa Bela', roleKey: 'role-member', photo: null },
+  { name: 'Sy. Miftahul Huda', roleKey: 'role-member', photo: null },
+  { name: 'Syabila', roleKey: 'role-member', photo: null },
+  { name: 'Tyara', roleKey: 'role-member', photo: null },
+  { name: 'Usman', roleKey: 'role-member', photo: null },
+];
+
+const teachersData = [
+  { subjectKey: 'subject-indonesia', teacher: 'Hilda Yuliani' },
+  { subjectKey: 'subject-economy', teacher: 'Jardi' },
+  { subjectKey: 'subject-islam', teacher: 'Muhammad Saparudin' },
+  { subjectKey: 'subject-math', teacher: 'Suparmi' },
+  { subjectKey: 'subject-pancasila', teacher: 'Ponirah' },
+  { subjectKey: 'subject-bio', teacher: 'Sri Maryani' },
+  { subjectKey: 'subject-histgeo', teacher: 'Ivan Bayu Putra' },
+  { subjectKey: 'subject-physics', teacher: 'Deka Maulidiansyah' },
+  { subjectKey: 'subject-informatics', teacher: 'Reza Wirasetya' },
+  { subjectKey: 'subject-history', teacher: 'Susanti Kristella' },
+  { subjectKey: 'subject-chembio', teacher: 'Marsela Winda' },
+  { subjectKey: 'subject-sociology', teacher: 'Harniyanti' },
+  { subjectKey: 'subject-english', teacher: 'Mamie Maliyanti' },
+  { subjectKey: 'subject-pjok', teacher: 'Eva Krisdawati' },
+  { subjectKey: 'subject-music', teacher: 'Nanda Faisal' },
+];
+
+const cleaningData = [
+  { dayKey: 'day-mon', students: 'Alvin (PJ), Dinara, Farel, Indira, Nayaka, Novtafiani, Syabila, Usman' },
+  { dayKey: 'day-tue', students: 'Fathan (PJ), Alvino, Dyarum, Indah, Mutiara, Rista, Huda' },
+  { dayKey: 'day-wed', students: 'Alin (PJ), Cyndi, Devita, Fartillah, Hari, Deron, Rafa' },
+  { dayKey: 'day-thu', students: 'Ali (PJ), Asyifha, Eliza, Khairulil, Refi, Syabila, Tyara' },
+  { dayKey: 'day-fri', students: 'Alvina (PJ), Elgita, Meita, Ary, Baihaqi, Naufal, Salsa Bela' },
+];
 
 // ===== RENDER FUNCTIONS =====
 function renderOrgChart() {
   const container = document.getElementById('orgChart');
   container.innerHTML = orgData.map(m => `
     <article class="org-card fade-up">
-      <div class="role">${m.role}</div>
+      <div class="role" data-translate="${m.roleKey}">${t(m.roleKey)}</div>
       <div class="name">${m.name}</div>
-      <div class="photo" aria-hidden="true">${m.photo ? `<img src="${m.photo}" alt="">` : 'Photo'}</div>
+      <div class="photo" aria-hidden="true">${m.photo ? `<img src="${m.photo}" alt="">` : (currentLang === 'id' ? 'Foto' : 'Photo')}</div>
     </article>
   `).join('');
 }
@@ -88,14 +233,14 @@ function renderRules() {
   container.innerHTML = rulesData.map((cat, i) => `
     <article class="accordion-item fade-up" data-index="${i}">
       <button class="accordion-btn" aria-expanded="false" aria-controls="rule-content-${i}">
-        <span>${cat.category}</span>
+        <span data-translate="${cat.categoryKey}">${t(cat.categoryKey)}</span>
         <span class="accordion-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
         </span>
       </button>
       <div class="accordion-content" id="rule-content-${i}" role="region" hidden>
         <div class="accordion-content-inner">
-          <ul>${cat.items.map(item => `<li>${item}</li>`).join('')}</ul>
+          <ul>${cat.itemKeys.map(key => `<li data-translate="${key}">${t(key)}</li>`).join('')}</ul>
         </div>
       </div>
     </article>
@@ -118,28 +263,51 @@ function renderSchedule() {
   tbody.innerHTML = scheduleData.map(row => `
     <tr>
       <td>${row.time}</td>
-      <td>${row.mon}</td>
-      <td>${row.tue}</td>
-      <td>${row.wed}</td>
-      <td>${row.thu}</td>
-      <td>${row.fri}</td>
+      <td data-translate="${row.mon}">${row.mon === '-' ? '-' : t(row.mon)}</td>
+      <td data-translate="${row.tue}">${row.tue === '-' ? '-' : t(row.tue)}</td>
+      <td data-translate="${row.wed}">${row.wed === '-' ? '-' : t(row.wed)}</td>
+      <td data-translate="${row.thu}">${row.thu === '-' ? '-' : t(row.thu)}</td>
+      <td data-translate="${row.fri}">${row.fri === '-' ? '-' : t(row.fri)}</td>
     </tr>
   `).join('');
 
   const cardsContainer = document.getElementById('scheduleCards');
-  const days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'];
-  const dayKeys = ['mon', 'tue', 'wed', 'thu', 'fri'];
-  cardsContainer.innerHTML = days.map((day, d) => `
+  const dayKeys = ['day-mon', 'day-tue', 'day-wed', 'day-thu', 'day-fri'];
+  const dayAttrKeys = ['mon', 'tue', 'wed', 'thu', 'fri'];
+  cardsContainer.innerHTML = dayKeys.map((dayKey, d) => `
     <article class="day-card fade-up">
-      <h3>${day}</h3>
+      <h3 data-translate="${dayKey}">${t(dayKey)}</h3>
       ${scheduleData.map((row, i) => `
         <div class="period">
           <span class="time">${row.time}</span>
-          <span class="subject ${row[dayKeys[d]] === 'Free' || row[dayKeys[d]] === 'Break' || row[dayKeys[d]] === 'Lunch' ? 'free' : ''}">${row[dayKeys[d]]}</span>
+          <span class="subject ${row[dayAttrKeys[d]] === 'subject-istirahat' ? 'free' : ''}" data-translate="${row[dayAttrKeys[d]]}">${row[dayAttrKeys[d]] === '-' ? '-' : t(row[dayAttrKeys[d]])}</span>
         </div>
       `).join('')}
     </article>
   `).join('');
+}
+
+function renderTeachers() {
+  const container = document.getElementById('teachersList');
+  container.innerHTML = teachersData.map((tItem, i) => `
+    <div class="teacher-item fade-up" style="transition-delay: ${i * 0.03}s">
+      <span class="teacher-subject" data-translate="${tItem.subjectKey}">${t(tItem.subjectKey)}</span>
+      <span class="teacher-name">${tItem.teacher}</span>
+    </div>
+  `).join('');
+}
+
+function renderCleaning() {
+  const container = document.getElementById('cleaningGrid');
+  container.innerHTML = cleaningData.map((c, i) => {
+    const students = c.students.split(', ').map(s => `• ${s}`).join('<br>');
+    return `
+    <article class="cleaning-card fade-up" style="transition-delay: ${i * 0.05}s">
+      <div class="cleaning-day" data-translate="${c.dayKey}">${t(c.dayKey)}</div>
+      <div class="cleaning-students">${students}</div>
+    </article>
+  `;
+  }).join('');
 }
 
 function renderAnnouncements() {
@@ -161,11 +329,37 @@ function renderMembers() {
     <article class="member-card fade-up" style="transition-delay: ${i * 0.03}s">
       <div class="photo" aria-hidden="true">${m.photo ? `<img src="${m.photo}" alt="">` : m.name}</div>
       <div class="info">
-        <div class="name">${m.name}</div>
-        <div class="role">${m.role}</div>
+        <div class="name">${i + 1}. ${m.name}</div>
+        <div class="role" data-translate="${m.roleKey}">${t(m.roleKey)}</div>
       </div>
     </article>
   `).join('');
+}
+
+function updateStaticText() {
+  // Nav links
+  document.querySelectorAll('.nav-links a').forEach(a => {
+    const key = a.dataset.id;
+    if (key && translations[key]) {
+      a.textContent = t(key);
+    }
+  });
+
+  // Section headers and other static text
+  document.querySelectorAll('[data-translate-static]').forEach(el => {
+    const key = el.dataset.translateStatic;
+    if (translations[key]) {
+      el.textContent = t(key);
+    }
+  });
+
+  // All translatable elements
+  document.querySelectorAll('[data-translate]').forEach(el => {
+    const key = el.dataset.translate;
+    if (translations[key]) {
+      el.textContent = t(key);
+    }
+  });
 }
 
 function setLastUpdated() {
@@ -173,6 +367,29 @@ function setLastUpdated() {
   if (el && el.textContent.includes('EDIT ME')) {
     el.textContent = new Date().toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' });
   }
+}
+
+// ===== LANGUAGE TOGGLE =====
+function initLangToggle() {
+  const toggle = document.getElementById('langToggle');
+  toggle.dataset.lang = currentLang;
+
+  toggle.addEventListener('click', () => {
+    currentLang = currentLang === 'id' ? 'en' : 'id';
+    toggle.dataset.lang = currentLang;
+    updateStaticText();
+
+    // Re-render dynamic content
+    renderOrgChart();
+    renderRules();
+    renderSchedule();
+    renderTeachers();
+    renderCleaning();
+    renderMembers();
+
+    // Re-init scroll animations for new elements
+    initScrollAnimations();
+  });
 }
 
 // ===== INTERACTIONS =====
@@ -241,9 +458,12 @@ document.addEventListener('DOMContentLoaded', () => {
   renderOrgChart();
   renderRules();
   renderSchedule();
+  renderTeachers();
+  renderCleaning();
   renderAnnouncements();
   renderMembers();
   setLastUpdated();
+  initLangToggle();
   initNavToggle();
   initActiveNav();
   initScrollTop();

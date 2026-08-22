@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Class 2-B Website — Schedule, rules, members, and announcements">
-  <meta property="og:title" content="Class 2-B">
+  <meta name="description" content="Class X-D Website — Schedule, rules, members, and announcements">
+  <meta property="og:title" content="Class X-D">
   <meta property="og:description" content="Our class website — schedule, rules, members, and updates">
   <meta property="og:type" content="website">
-  <title>Class 2-B</title>
+  <title>Class X-D</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -16,18 +16,27 @@
 <body>
   <nav class="nav" id="nav">
     <div class="nav-inner">
-      <a href="#" class="nav-brand">Class 2-B</a>
+      <a href="#" class="nav-brand">Class X-D</a>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
         <span class="hamburger"></span>
       </button>
+      <button class="lang-toggle" id="langToggle" aria-label="Toggle language">
+        <span class="lang-label">ID</span>
+        <span class="lang-switch">
+          <span class="lang-switch-slider"></span>
+        </span>
+        <span class="lang-label">EN</span>
+      </button>
       <ul class="nav-links" id="navLinks">
-        <li><a href="#hero">Home</a></li>
-        <li><a href="#structure">Structure</a></li>
-        <li><a href="#rules">Rules</a></li>
-        <li><a href="#schedule">Schedule</a></li>
-        <li><a href="#announcements">Announcements</a></li>
-        <li><a href="#members">Members</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#hero" data-en="Home" data-id="nav-home">Home</a></li>
+        <li><a href="#structure" data-en="Structure" data-id="nav-structure">Structure</a></li>
+        <li><a href="#rules" data-en="Rules" data-id="nav-rules">Rules</a></li>
+        <li><a href="#schedule" data-en="Schedule" data-id="nav-schedule">Schedule</a></li>
+        <li><a href="#teachers" data-en="Teachers" data-id="nav-teachers">Teachers</a></li>
+        <li><a href="#cleaning" data-en="Cleaning" data-id="nav-cleaning">Cleaning</a></li>
+        <li><a href="#announcements" data-en="Announcements" data-id="nav-announcements">Announcements</a></li>
+        <li><a href="#members" data-en="Members" data-id="nav-members">Members</a></li>
+        <li><a href="#location" data-en="Location" data-id="nav-location">Location</a></li>
       </ul>
     </div>
   </nav>
@@ -35,8 +44,8 @@
   <main>
     <section id="hero" class="hero">
       <div class="hero-content">
-        <h1>Class 2-B</h1>
-        <p class="tagline">2025–2026 Academic Year · Homeroom 204</p>
+        <h1>Class X-D</h1>
+        <p class="tagline" data-translate-static="hero-tagline">Tahun Ajaran 2025–2026 · Wali Kelas X-D</p>
         <div class="hero-photo" aria-hidden="true">
           <svg viewBox="0 0 300 200" class="placeholder-img">
             <rect fill="#1a1a2e" width="300" height="200"/>
@@ -48,8 +57,8 @@
 
     <section id="structure" class="section">
       <header class="section-header">
-        <h2>Class Structure</h2>
-        <p>Our leadership team for the year</p>
+        <h2 data-translate-static="structure-title">Struktur Kelas</h2>
+        <p data-translate-static="structure-subtitle">Tim pengurus kelas kami</p>
       </header>
       <div class="org-chart" id="orgChart">
         <!-- Rendered by JS -->
@@ -58,8 +67,8 @@
 
     <section id="rules" class="section">
       <header class="section-header">
-        <h2>Class Rules</h2>
-        <p>Guidelines that keep our class running smoothly</p>
+        <h2 data-translate-static="rules-title">Aturan Kelas</h2>
+        <p data-translate-static="rules-subtitle">Pedoman yang menjaga kelancaran kelas</p>
       </header>
       <div class="accordion" id="rulesAccordion">
         <!-- Rendered by JS -->
@@ -68,8 +77,8 @@
 
     <section id="schedule" class="section">
       <header class="section-header">
-        <h2>Weekly Schedule</h2>
-        <p>Mon–Fri, Periods 1–7</p>
+        <h2 data-translate-static="schedule-title">Jadwal Mingguan</h2>
+        <p data-translate-static="schedule-subtitle">Sen–Jum, Jam 1–7</p>
       </header>
       <div class="schedule-table-wrap">
         <table class="schedule-table" id="scheduleTable">
@@ -93,10 +102,30 @@
       </div>
     </section>
 
+    <section id="teachers" class="section">
+      <header class="section-header">
+        <h2 data-translate-static="teachers-title">Guru</h2>
+        <p data-translate-static="teachers-subtitle">Guru mata pelajaran kami</p>
+      </header>
+      <div class="teachers-list" id="teachersList">
+        <!-- Rendered by JS -->
+      </div>
+    </section>
+
+    <section id="cleaning" class="section">
+      <header class="section-header">
+        <h2 data-translate-static="cleaning-title">Jadwal Piket</h2>
+        <p data-translate-static="cleaning-subtitle">Tugas piket mingguan</p>
+      </header>
+      <div class="cleaning-grid" id="cleaningGrid">
+        <!-- Rendered by JS -->
+      </div>
+    </section>
+
     <section id="announcements" class="section">
       <header class="section-header">
-        <h2>Announcements</h2>
-        <p>Latest updates and reminders</p>
+        <h2 data-translate-static="announcements-title">Pengumuman</h2>
+        <p data-translate-static="announcements-subtitle">Informasi dan pengingat terbaru</p>
       </header>
       <ul class="announcements-list" id="announcementsList">
         <!-- Rendered by JS -->
@@ -105,36 +134,27 @@
 
     <section id="members" class="section">
       <header class="section-header">
-        <h2>Members</h2>
-        <p>Our class family</p>
+        <h2 data-translate-static="members-title">Anggota</h2>
+        <p data-translate-static="members-subtitle">Keluarga kelas kami</p>
       </header>
       <div class="members-grid" id="membersGrid">
         <!-- Rendered by JS -->
       </div>
     </section>
 
-    <section id="contact" class="section contact">
+    <section id="location" class="section location">
       <header class="section-header">
-        <h2>Contact</h2>
-        <p>Get in touch</p>
+        <h2 data-translate-static="location-title">Lokasi</h2>
+        <p data-translate-static="location-subtitle">Temukan kami di sini</p>
       </header>
       <div class="contact-grid">
         <div class="contact-card">
-          <h3>Class Group Chat</h3>
-          <a href="[EDIT ME: Group chat link]" class="contact-link" target="_blank" rel="noopener">Join on [Platform]</a>
-        </div>
-        <div class="contact-card">
-          <h3>Email</h3>
-          <a href="mailto:[EDIT ME: class email]" class="contact-link">[EDIT ME: class email]</a>
-        </div>
-        <div class="contact-card">
-          <h3>Homeroom</h3>
-          <p class="contact-text">Room 204, Building B</p>
+          <h3 data-translate-static="location-room">Wali Kelas</h3>
+          <p class="contact-text" data-translate-static="location-room-text">Gedung B, Ruang X-D</p>
         </div>
       </div>
       <div class="footer-meta">
-        <p>Last updated: <span id="lastUpdated">[EDIT ME: date]</span></p>
-        <p>Built for GitHub Pages · <a href="https://github.com/[EDIT ME: username]/[EDIT ME: repo]" target="_blank" rel="noopener">View source</a></p>
+        <p><span data-translate-static="last-updated">Terakhir diperbarui:</span> <span id="lastUpdated">[EDIT ME: date]</span></p>
       </div>
     </section>
   </main>
