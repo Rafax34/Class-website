@@ -66,21 +66,20 @@ button { font: inherit; background: none; border: none; cursor: pointer; }
 .nav-brand { font-family: var(--font-heading); font-weight: 700; font-size: 1.25rem; color: var(--text); }
 .nav-brand:hover { color: var(--accent); }
 
-/* Center nav links container - 3-column grid on desktop */
+/* Center nav links container - horizontal on desktop */
 .nav-links-wrap {
   flex: 1;
   display: flex;
   justify-content: center;
 }
 .nav-links {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-wrap: wrap;
   gap: 0.25rem;
-  justify-items: center;
+  justify-content: center;
 }
 .nav-links a {
   position: relative;
-  width: 100%;
   text-align: center;
   padding: 0.5rem 0.75rem;
   border-radius: var(--radius-sm);
@@ -142,16 +141,16 @@ button { font: inherit; background: none; border: none; cursor: pointer; }
   }
   .nav-links-wrap.open { display: flex; }
   .nav-links {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(3, 1fr);
     width: 100%;
   }
   .nav-links a {
-    text-align: left;
-    padding: 0.75rem 1rem;
-    font-size: 0.95rem;
+    text-align: center;
+    padding: 0.5rem 0.5rem;
+    font-size: 0.75rem;
   }
   .nav-links a::before {
-    bottom: 0.5rem; left: 1rem; right: 1rem;
+    bottom: 0.25rem; left: 0.5rem; right: 0.5rem;
   }
 }
 @media (max-width: 480px) {
