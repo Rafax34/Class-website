@@ -166,6 +166,17 @@ button { font: inherit; background: none; border: none; cursor: pointer; }
 .member-card .name { font-weight: 600; font-size: 0.9rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .member-card .role { font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; }
 
+/* ===== MEMORY ===== */
+.memory-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; max-width: 1100px; margin: 0 auto; }
+.memory-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition); }
+.memory-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); border-color: var(--accent); }
+.memory-photo { width: 100%; aspect-ratio: 4/3; background: var(--bg-elevated); display: flex; align-items: center; justify-content: center; overflow: hidden; }
+.memory-photo img { width: 100%; height: 100%; object-fit: cover; }
+.memory-photo .placeholder-img { width: 100%; height: 100%; }
+.memory-info { padding: 1rem; }
+.memory-caption { font-weight: 600; font-size: 1rem; margin-bottom: 0.25rem; }
+.memory-date { font-size: 0.85rem; color: var(--text-muted); }
+
 /* ===== LOCATION / FOOTER ===== */
 .location { padding-bottom: 6rem; }
 .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; max-width: 900px; margin: 0 auto 3rem; }

@@ -7,8 +7,9 @@ const translations = {
   'nav-schedule': { id: 'Jadwal', en: 'Schedule' },
   'nav-teachers': { id: 'Guru', en: 'Teachers' },
   'nav-cleaning': { id: 'Piket', en: 'Cleaning' },
-  'nav-announcements': { id: 'Pengumuman', en: 'Announcements' },
+  'nav-homework': { id: 'PR', en: 'Homework' },
   'nav-members': { id: 'Anggota', en: 'Members' },
+  'nav-memory': { id: 'Kenangan', en: 'Memory' },
   'nav-location': { id: 'Lokasi', en: 'Location' },
 
   // Section headers
@@ -23,8 +24,8 @@ const translations = {
   'teachers-subtitle': { id: 'Guru mata pelajaran kami', en: 'Our subject teachers' },
   'cleaning-title': { id: 'Jadwal Piket', en: 'Cleaning Schedule' },
   'cleaning-subtitle': { id: 'Tugas piket mingguan', en: 'Weekly class cleaning duties' },
-  'announcements-title': { id: 'Pengumuman', en: 'Announcements' },
-  'announcements-subtitle': { id: 'Informasi dan pengingat terbaru', en: 'Latest updates and reminders' },
+  'homework-title': { id: 'PR', en: 'Homework' },
+  'homework-subtitle': { id: 'Tugas dan pekerjaan rumah', en: 'Assignments and homework' },
   'members-title': { id: 'Anggota', en: 'Members' },
   'members-subtitle': { id: 'Keluarga kelas kami', en: 'Our class family' },
   'location-title': { id: 'Lokasi', en: 'Location' },
@@ -33,15 +34,19 @@ const translations = {
   'location-room-text': { id: 'Gedung B, Ruang X-D', en: 'Building B, Room X-D' },
   'last-updated': { id: 'Terakhir diperbarui:', en: 'Last updated:' },
 
+  // Memory section
+  'memory-title': { id: 'Kenangan Kelas', en: 'Class Memory' },
+  'memory-subtitle': { id: 'Momen-momen berharga kami', en: 'Our favorite moments together' },
+
   // Roles
   'role-homeroom': { id: 'Wali Kelas', en: 'Homeroom Teacher' },
   'role-president': { id: 'Ketua Kelas', en: 'Class President' },
   'role-vice': { id: 'Wakil Ketua', en: 'Vice President' },
   'role-secretary': { id: 'Sekretaris', en: 'Secretary' },
   'role-treasurer': { id: 'Bendahara', en: 'Treasurer' },
-  'role-academic': { id: 'Koordinator Akademik', en: 'Academic Committee' },
-  'role-sports': { id: 'Koordinator Olahraga', en: 'Sports Committee' },
-  'role-cultural': { id: 'Koordinator Kesenian', en: 'Cultural Committee' },
+  'role-security': { id: 'Seksi Keamanan', en: 'Security Committee' },
+  'role-cleaning': { id: 'Seksi Kebersihan', en: 'Cleaning Committee' },
+  'role-medsos': { id: 'Tim Medsos', en: 'Social Media Team' },
   'role-member': { id: 'Anggota', en: 'Member' },
 
   // Schedule subjects
@@ -99,14 +104,21 @@ function t(key) {
 
 // ===== DATA =====
 const orgData = [
-  { roleKey: 'role-homeroom', name: '[EDIT ME: Teacher Name]', photo: null },
-  { roleKey: 'role-president', name: '[EDIT ME: President Name]', photo: null },
-  { roleKey: 'role-vice', name: '[EDIT ME: VP Name]', photo: null },
-  { roleKey: 'role-secretary', name: '[EDIT ME: Secretary Name]', photo: null },
-  { roleKey: 'role-treasurer', name: '[EDIT ME: Treasurer Name]', photo: null },
-  { roleKey: 'role-academic', name: '[EDIT ME: Head Name]', photo: null },
-  { roleKey: 'role-sports', name: '[EDIT ME: Head Name]', photo: null },
-  { roleKey: 'role-cultural', name: '[EDIT ME: Head Name]', photo: null },
+  { roleKey: 'role-homeroom', name: 'Lisa Febriandini L. Tobing, S.Pd.Gr', photo: 'assets/images/Class-Structure/Wali kelas.jpeg' },
+  { roleKey: 'role-president', name: 'Asyifha Dwiharti', photo: 'assets/images/Class-Structure/Ketua kelas-Asyifha Dwiharti.jpeg' },
+  { roleKey: 'role-vice', name: 'Usman', photo: 'assets/images/Class-Structure/Wakil Ketua-Usman.jpeg' },
+  { roleKey: 'role-secretary', name: 'Mutiara Revina', photo: null },
+  { roleKey: 'role-secretary', name: 'Devita Maharani', photo: 'assets/images/Class-Structure/Sekretaris-Devita Maharani.jpeg' },
+  { roleKey: 'role-treasurer', name: 'Fartillah Suci Zaskia', photo: 'assets/images/Class-Structure/Bendahara-Fartillah Suci Zaskia.jpeg' },
+  { roleKey: 'role-treasurer', name: 'Indah Amelia', photo: 'assets/images/Class-Structure/Bendahara-Indah.png' },
+  { roleKey: 'role-security', name: 'Ali Al-Khalili', photo: 'assets/images/Class-Structure/seksi keamanan-Ali Al Khalili.jpeg' },
+  { roleKey: 'role-security', name: 'Khairulil Akbar', photo: 'assets/images/Class-Structure/seksi keamanan-Khairulil.jpeg' },
+  { roleKey: 'role-cleaning', name: 'Rista Istiqomah', photo: 'assets/images/Class-Structure/seksi kebersihan-Rista Istiqomah.jpeg' },
+  { roleKey: 'role-cleaning', name: 'M. Baihaqi Akram', photo: 'assets/images/Class-Structure/seksi kebersihan-M. Baihaqi Akram.jpeg' },
+  { roleKey: 'role-cleaning', name: 'Hari Kurniawan', photo: 'assets/images/Class-Structure/Seksi kebersihan-Hari Kurniawan.jpeg' },
+  { roleKey: 'role-medsos', name: 'Alin Qistina Ningabhia', photo: null },
+  { roleKey: 'role-medsos', name: 'M. Deron Phaedra Al-Bahy', photo: 'assets/images/Class-Structure/Tim Medsos-M. Deron.jpeg' },
+  { roleKey: 'role-medsos', name: 'Alvina Angelica Novarinda', photo: null },
 ];
 
 const rulesData = [
@@ -143,12 +155,12 @@ const scheduleData = [
   { time: '14:30–15:15', mon: 'subject-islam', tue: 'subject-histgeo', wed: 'subject-history', thu: '-', fri: '-' },
 ];
 
-const announcementsData = [
-  { title: 'Midterm Exam Schedule Released', date: '2025-10-15', text: 'Check the schedule section for dates. Study sessions Mon/Wed 3:30–4:30 PM in Room X-D.' },
-  { title: 'Field Trip to Science Museum', date: '2025-10-08', text: 'Permission slips due by Oct 20. Cost: $15. Lunch provided.' },
-  { title: 'Parent-Teacher Conferences', date: '2025-10-01', text: 'Nov 3–5. Sign up via the class group chat link in Location.' },
-  { title: 'New Club Sign-ups Open', date: '2025-09-25', text: 'Robotics, Debate, and Photography clubs accepting members until Sep 30.' },
-  { title: 'Welcome to Class X-D!', date: '2025-09-01', text: 'Excited for a great year together. Introduce yourself in the group chat!' },
+const homeworkData = [
+  { title: 'Geografi', date: '2026-8-11', text: '10 pengertian dengan masing-masing 1 contoh. ada di wa' },
+  { title: 'Seni Musik', date: '2026-8-21', text: '4 Gambar objek terserah. 1. gambar original 2. gambar distorsi 3. gambar deformasi 4. gambar abstraksi.' },
+  { title: 'Pengambilan Buku Paket', date: '2026-8-24', text: 'Siapkan 9 Sampul bening serta alat untuk masang. tanggal belum pasti.' },
+  { title: 'Biologi', date: '2026-8-11', text: 'Tugas Kelompok. Mulai mengerjakan ketika masuk kembali(Tatap muka). ada di WA.' },
+  { title: 'kosong', date: '2025-10-10', text: 'kosong' },
 ];
 
 const membersData = [
@@ -214,6 +226,14 @@ const cleaningData = [
   { dayKey: 'day-wed', students: 'Alin (PJ), Cyndi, Devita, Fartillah, Hari, Deron, Rafa' },
   { dayKey: 'day-thu', students: 'Ali (PJ), Asyifha, Eliza, Khairulil, Refi, Syabila, Tyara' },
   { dayKey: 'day-fri', students: 'Alvina (PJ), Elgita, Meita, Ary, Baihaqi, Naufal, Salsa Bela' },
+];
+
+const memoryData = [
+  { caption: 'Hari Pertama Sekolah', date: '2025-07-14', photo: null },
+  { caption: 'Upacara Bendera', date: '2025-08-17', photo: null },
+  { caption: 'Class Meeting', date: '2025-09-20', photo: null },
+  { caption: 'Study Tour', date: '2025-10-05', photo: null },
+  { caption: 'Perayaan Natal', date: '2025-12-20', photo: null },
 ];
 
 // ===== RENDER FUNCTIONS =====
@@ -310,15 +330,15 @@ function renderCleaning() {
   }).join('');
 }
 
-function renderAnnouncements() {
-  const container = document.getElementById('announcementsList');
-  container.innerHTML = announcementsData.map((a, i) => `
+function renderHomework() {
+  const container = document.getElementById('homeworkList');
+  container.innerHTML = homeworkData.map((h, i) => `
     <article class="announcement fade-up" style="transition-delay: ${i * 0.05}s">
       <header class="announcement-header">
-        <h3>${a.title}</h3>
-        <time class="date" datetime="${a.date}">${new Date(a.date).toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' })}</time>
+        <h3>${h.title}</h3>
+        <time class="date" datetime="${h.date}">${new Date(h.date).toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' })}</time>
       </header>
-      <p>${a.text}</p>
+      <p>${h.text}</p>
     </article>
   `).join('');
 }
@@ -331,6 +351,19 @@ function renderMembers() {
       <div class="info">
         <div class="name">${i + 1}. ${m.name}</div>
         <div class="role" data-translate="${m.roleKey}">${t(m.roleKey)}</div>
+      </div>
+    </article>
+  `).join('');
+}
+
+function renderMemory() {
+  const container = document.getElementById('memoryGrid');
+  container.innerHTML = memoryData.map((m, i) => `
+    <article class="memory-card fade-up" style="transition-delay: ${i * 0.05}s">
+      <div class="memory-photo" aria-hidden="true">${m.photo ? `<img src="${m.photo}" alt="">` : '<svg viewBox="0 0 4 3" class="placeholder-img"><rect fill="#1a1a2e" width="4" height="3"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#4a4a6a" font-family="Space Grotesk" font-size="0.3">Photo</text></svg>'}</div>
+      <div class="memory-info">
+        <div class="memory-caption">${m.caption}</div>
+        <time class="memory-date" datetime="${m.date}">${new Date(m.date).toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' })}</time>
       </div>
     </article>
   `).join('');
@@ -460,8 +493,9 @@ document.addEventListener('DOMContentLoaded', () => {
   renderSchedule();
   renderTeachers();
   renderCleaning();
-  renderAnnouncements();
+  renderHomework();
   renderMembers();
+  renderMemory();
   setLastUpdated();
   initLangToggle();
   initNavToggle();
