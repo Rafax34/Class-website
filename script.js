@@ -185,9 +185,9 @@ const membersData = [
   { name: 'Indira Cahaya Rabbani', roleKey: 'role-member', photo: null },
   { name: 'Khairulil Abrar', roleKey: 'role-member', photo: null },
   { name: 'Meita Hafiza', roleKey: 'role-member', photo: null },
-  { name: 'Muhammad Ary Azhari', roleKey: 'role-member', photo: null },
-  { name: 'Muhammad Baihaqi Akram', roleKey: 'role-member', photo: null },
-  { name: 'Muhammad Deron Phaedra Al-Bahy', roleKey: 'role-member', photo: null },
+  { name: 'M. Ary Azhari', roleKey: 'role-member', photo: null },
+  { name: 'M. Baihaqi Akram', roleKey: 'role-member', photo: null },
+  { name: 'M. Deron Phaedra Al-Bahy', roleKey: 'role-member', photo: null },
   { name: 'Mutiara Revina Kurniawan', roleKey: 'role-member', photo: null },
   { name: 'Naufal Ardian Rafizal', roleKey: 'role-member', photo: null },
   { name: 'Nayaka Putri Effie', roleKey: 'role-member', photo: null },
@@ -471,6 +471,17 @@ function initScrollAnimations() {
     });
   }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
   document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+  // Observe section headers
+  const headerObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        headerObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -100px 0px' });
+  document.querySelectorAll('.section-header').forEach(el => headerObserver.observe(el));
 }
 
 function initSmoothScrollFallback() {
