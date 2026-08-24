@@ -30,7 +30,7 @@ const translations = {
   'members-subtitle': { id: 'Keluarga kelas kami', en: 'Our class family' },
   'location-title': { id: 'Lokasi', en: 'Location' },
   'location-subtitle': { id: 'Temukan kami di sini', en: 'Find us here' },
-  'location-room': { id: 'Wali Kelas', en: 'Homeroom' },
+  'location-room': { id: 'Ruang Kelas', en: 'Homeroom' },
   'location-room-text': { id: 'Gedung B, Ruang X-D', en: 'Building B, Room X-D' },
   'last-updated': { id: 'Terakhir diperbarui:', en: 'Last updated:' },
 
@@ -104,7 +104,7 @@ function t(key) {
 
 // ===== DATA =====
 const orgData = [
-  { roleKey: 'role-homeroom', name: 'Lisa Febriandini L. Tobing, S.Pd.Gr', photo: 'assets/images/Class-Structure/Wali kelas.jpeg' },
+  { roleKey: 'role-homeroom', name: 'Lisa Febriandini S.Pd.Gr', photo: 'assets/images/Class-Structure/Wali kelas.jpeg' },
   { roleKey: 'role-president', name: 'Asyifha Dwiharti', photo: 'assets/images/Class-Structure/Ketua kelas-Asyifha Dwiharti.jpeg' },
   { roleKey: 'role-vice', name: 'Usman', photo: 'assets/images/Class-Structure/Wakil Ketua-Usman.jpeg' },
   { roleKey: 'role-secretary', name: 'Mutiara Revina', photo: null },
@@ -230,10 +230,10 @@ const cleaningData = [
 
 const memoryData = [
   { caption: 'Hari Pertama Sekolah', date: '2025-07-14', photo: null },
-  { caption: 'Upacara Bendera', date: '2025-08-17', photo: null },
-  { caption: 'Class Meeting', date: '2025-09-20', photo: null },
-  { caption: 'Study Tour', date: '2025-10-05', photo: null },
-  { caption: 'Perayaan Natal', date: '2025-12-20', photo: null },
+  { caption: 'Kosong', date: '2025-08-17', photo: null },
+  { caption: 'Kosong', date: '2025-09-20', photo: null },
+  { caption: 'Kosong', date: '2025-10-05', photo: null },
+  { caption: 'Kosong', date: '2025-12-20', photo: null },
 ];
 
 // ===== RENDER FUNCTIONS =====
