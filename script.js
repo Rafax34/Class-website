@@ -13,13 +13,13 @@ const translations = {
   'nav-location': { id: 'Lokasi', en: 'Location' },
 
   // Section headers
-  'hero-tagline': { id: 'Tahun Ajaran 2025–2026 · Wali Kelas X-D', en: '2025–2026 Academic Year · Homeroom X-D' },
+  'hero-tagline': { id: 'Tahun Ajaran 2025–2026 · Ruang Kelas X-D', en: '2025–2026 Academic Year · Homeroom X-D' },
   'structure-title': { id: 'Struktur Kelas', en: 'Class Structure' },
   'structure-subtitle': { id: 'Tim pengurus kelas kami', en: 'Our leadership team for the year' },
   'rules-title': { id: 'Aturan Kelas', en: 'Class Rules' },
   'rules-subtitle': { id: 'Pedoman yang menjaga kelancaran kelas', en: 'Guidelines that keep our class running smoothly' },
   'schedule-title': { id: 'Jadwal Mingguan', en: 'Weekly Schedule' },
-  'schedule-subtitle': { id: 'Sen–Jum, Jam 1–7', en: 'Mon–Fri, Periods 1–7' },
+  'schedule-subtitle': { id: 'Sen–Jum, Jam 7-Pulang', en: 'Mon–Fri, Periods 7-Go Home' },
   'teachers-title': { id: 'Guru', en: 'Teachers' },
   'teachers-subtitle': { id: 'Guru mata pelajaran kami', en: 'Our subject teachers' },
   'cleaning-title': { id: 'Jadwal Piket', en: 'Cleaning Schedule' },
@@ -56,7 +56,7 @@ const translations = {
   'subject-indonesia': { id: 'Bahasa Indonesia', en: 'Indonesian' },
   'subject-math': { id: 'Matematika', en: 'Mathematics' },
   'subject-physics': { id: 'Fisika', en: 'Physics' },
-  'subject-chembio': { id: 'Kimia/Biologi', en: 'Chemistry/Biology' },
+  'subject-chembio': { id: 'Kimia', en: 'Chemistry' },
   'subject-bio': { id: 'Biologi', en: 'Biology' },
   'subject-pancasila': { id: 'Pendidikan Pancasila', en: 'Civics' },
   'subject-informatics': { id: 'Informatika', en: 'Informatics' },
@@ -67,7 +67,7 @@ const translations = {
   'subject-english': { id: 'Bahasa Inggris', en: 'English' },
   'subject-islam': { id: 'Pendidikan Agama Islam', en: 'Islamic Studies' },
   'subject-history': { id: 'Sejarah', en: 'History' },
-  'subject-histgeo': { id: 'Sejarah/Geografi', en: 'History/Geography' },
+  'subject-histgeo': { id: 'Geografi', en: 'Geography' },
 
   // Rules categories
   'rules-attendance': { id: 'Kehadiran', en: 'Attendance' },
@@ -158,9 +158,12 @@ const scheduleData = [
 const homeworkData = [
   { title: 'Geografi', date: '2026-8-11', text: '10 pengertian dengan masing-masing 1 contoh. ada di wa' },
   { title: 'Seni Musik', date: '2026-8-21', text: '4 Gambar objek terserah. 1. gambar original 2. gambar distorsi 3. gambar deformasi 4. gambar abstraksi.' },
-  { title: 'Pengambilan Buku Paket', date: '2026-8-24', text: 'Siapkan 9 Sampul bening serta alat untuk masang. tanggal belum pasti.' },
+  { title: 'Pengambilan Buku Paket', date: '2026-8-24', text: 'Siapkan 9 Sampul bening serta alat untuk masang. tanggal belum pasti. Kemungkinan senin' },
   { title: 'Biologi', date: '2026-8-11', text: 'Tugas Kelompok. Mulai mengerjakan ketika masuk kembali(Tatap muka). ada di WA.' },
-  { title: 'kosong', date: '2025-10-10', text: 'kosong' },
+  { title: 'Kimia', date: '2026-8-27', text: 'Tugas Cetak yang pdf Soal Kimia. Yang laboratorium di baca. pengumpulan saat masuk kembali.' },
+  { title: 'Sosiologi', date: '2026-08-27', text: 'Print LKPD dan kerjakan di kertasnya. ada di WA. pengumpulan saat masuk kembali.' },
+  { title: 'kosong', date: '2026-08-29', text: 'kosong' },
+  { title: 'kosong', date: '2026-08-30', text: 'kosong' },
 ];
 
 const membersData = [
