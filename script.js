@@ -354,6 +354,7 @@ function renderMembers() {
       <div class="info">
         <div class="name">${i + 1}. ${m.name}</div>
         <div class="role" data-translate="${m.roleKey}">${t(m.roleKey)}</div>
+        <button class="member-view-btn">View</button>
       </div>
     </article>
   `).join('');
