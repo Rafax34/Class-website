@@ -194,14 +194,14 @@ const membersData = [
   { name: 'Mutiara Revina Kurniawan', roleKey: 'role-member', photo: null },
   { name: 'Naufal Ardian Rafi\'zal', roleKey: 'role-member', photo: null },
   { name: 'Nayaka Putri Effie', roleKey: 'role-member', photo: null },
-  { name: 'Novtafiani XD', roleKey: 'role-member', photo: null },
+  { name: 'Novtafiani', roleKey: 'role-member', photo: null },
   { name: 'Rafa Aydinfadhilah', roleKey: 'role-member', photo: null },
   { name: 'Refi Leytisaputri', roleKey: 'role-member', photo: null },
   { name: 'Rista Istiqomah', roleKey: 'role-member', photo: null },
   { name: 'Salsa Bela', roleKey: 'role-member', photo: null },
   { name: 'Syarif Miftahul Huda', roleKey: 'role-member', photo: null },
-  { name: 'Syabila XD', roleKey: 'role-member', photo: null },
-  { name: 'Tyara XD', roleKey: 'role-member', photo: null },
+  { name: 'Syabila', roleKey: 'role-member', photo: null },
+  { name: 'Tyara', roleKey: 'role-member', photo: null },
   { name: 'Usman', roleKey: 'role-member', photo: null },
 ];
 
