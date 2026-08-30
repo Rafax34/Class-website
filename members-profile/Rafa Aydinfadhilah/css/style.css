@@ -116,7 +116,7 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
   padding: 1rem 1.5rem;
   background: transparent;
   border-bottom: 1px solid transparent;
-  transition: var(--transition-colors), background-color 0.3s ease;
+  transition: var(--transition-colors);
 }
 .navbar.scrolled {
   background: color-mix(in srgb, var(--bg) 82%, transparent);
@@ -169,6 +169,7 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
 
 /* Theme toggle */
 .theme-toggle {
+  position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -178,10 +179,18 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
   color: var(--text-muted);
   transition: color 0.2s ease, background-color 0.2s ease, transform 0.15s var(--ease-out);
 }
-.theme-toggle svg { width: 20px; height: 20px; }
-.icon-moon { display: none; }
-html[data-theme="light"] .icon-sun { display: none; }
-html[data-theme="light"] .icon-moon { display: block; }
+.theme-toggle svg {
+  position: absolute;
+  inset: 0;
+  width: 20px;
+  height: 20px;
+  margin: auto;
+  transition: opacity 0.2s var(--ease-out), transform 0.2s var(--ease-out);
+}
+.theme-toggle .icon-sun { opacity: 1; transform: rotate(0) scale(1); }
+.theme-toggle .icon-moon { opacity: 0; transform: rotate(40deg) scale(0.6); }
+html[data-theme="light"] .theme-toggle .icon-sun { opacity: 0; transform: rotate(-40deg) scale(0.6); }
+html[data-theme="light"] .theme-toggle .icon-moon { opacity: 1; transform: rotate(0) scale(1); }
 @media (hover: hover) and (pointer: fine) {
   .theme-toggle:hover { color: var(--accent); background: var(--accent-dim); transform: translateY(-1px); }
 }
@@ -255,26 +264,25 @@ html[data-theme="light"] .icon-moon { display: block; }
 .blob {
   position: absolute;
   border-radius: 50%;
-  filter: blur(70px);
   opacity: 0.5;
   will-change: transform;
 }
 .blob-1 {
   width: 420px; height: 420px;
   left: -80px; top: -60px;
-  background: rgba(99, 102, 241, 0.5);
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.55) 0%, rgba(99, 102, 241, 0) 68%);
   animation: blobFloat 18s var(--ease-in-out) infinite alternate;
 }
 .blob-2 {
   width: 380px; height: 380px;
   right: -70px; top: 30%;
-  background: rgba(244, 114, 182, 0.4);
+  background: radial-gradient(circle, rgba(244, 114, 182, 0.45) 0%, rgba(244, 114, 182, 0) 68%);
   animation: blobFloat 22s var(--ease-in-out) infinite alternate-reverse;
 }
 .blob-3 {
   width: 360px; height: 360px;
   left: 30%; bottom: -140px;
-  background: rgba(0, 212, 170, 0.4);
+  background: radial-gradient(circle, rgba(0, 212, 170, 0.45) 0%, rgba(0, 212, 170, 0) 68%);
   animation: blobFloat 26s var(--ease-in-out) infinite alternate;
 }
 @keyframes blobFloat {
@@ -443,6 +451,7 @@ html[data-theme="light"] .icon-moon { display: block; }
 }
 @media (hover: hover) and (pointer: fine) {
   .project-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); border-color: var(--accent); }
+  .project-card:hover .project-thumb { transform: scale(1.05); }
 }
 .project-thumb {
   position: relative;
@@ -451,6 +460,7 @@ html[data-theme="light"] .icon-moon { display: block; }
   align-items: flex-end;
   padding: 1rem;
   overflow: hidden;
+  transition: transform 0.3s var(--ease-out);
 }
 .thumb-class-site { background: linear-gradient(135deg, #0f0f14, #1a1a2e 55%, #064e3b); }
 .thumb-portfolio { background: linear-gradient(135deg, #0f0f14, #1a1a2e 55%, #312e81); }
@@ -588,7 +598,6 @@ html[data-theme="light"] .icon-moon { display: block; }
   opacity: 0;
   transform: translateY(24px);
   transition: opacity 0.6s var(--ease-out) var(--delay, 0ms), transform 0.6s var(--ease-out) var(--delay, 0ms);
-  will-change: opacity, transform;
 }
 .reveal.visible { opacity: 1; transform: none; }
 
@@ -600,17 +609,14 @@ html[data-theme="light"] .icon-moon { display: block; }
 }
 .hero-name.reveal.visible { filter: blur(0); }
 
-/* Stagger — 60ms apart, decorative only, never blocks input */
-.skill-card:nth-child(2), .project-card:nth-child(2), .timeline-item:nth-child(2) { --delay: 80ms; }
-.skill-card:nth-child(3), .project-card:nth-child(3), .timeline-item:nth-child(3) { --delay: 160ms; }
-.info-card:nth-child(2) { --delay: 80ms; }
-.info-card:nth-child(3) { --delay: 160ms; }
+/* Stagger is set per element via the inline --delay custom property in index.html. */
 
 /* ===== Reduced motion ===== */
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; }
   .reveal, .hero-reveal, .hero-name.reveal { opacity: 1; transform: none; filter: none; transition: none; }
+  .theme-toggle .icon-sun, .theme-toggle .icon-moon { transform: none; }
   .blob, .scroll-hint { display: none; }
   .nav-links { transition: opacity 0.15s ease; }
 }
