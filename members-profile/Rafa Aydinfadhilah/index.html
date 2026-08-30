@@ -1,49 +1,310 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Rafa Aydinfadhilah — aspiring developer and student building clean web experiences.">
+  <meta property="og:title" content="Rafa Aydinfadhilah | Portfolio">
+  <meta property="og:description" content="Aspiring developer &amp; student. Explore my projects.">
+  <meta property="og:type" content="website">
   <title>Rafa Aydinfadhilah | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <nav class="navbar">
-    <div class="logo">RA</div>
-    <ul class="nav-links">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <nav class="navbar" id="navbar" aria-label="Main navigation">
+    <a href="#home" class="logo">RA<span class="logo-dot">.</span></a>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" class="nav-link active">Home</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#experience" class="nav-link">Experience</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
     </ul>
+
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme" aria-pressed="false">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8z"/></svg>
+      </button>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+        <span class="hamburger"></span>
+      </button>
+    </div>
   </nav>
 
-  <header id="home" class="hero">
-    <h1>Hello, I'm <span>Rafa Aydinfadhilah</span></h1>
-    <p>Student & Aspiring Developer</p>
-    <a href="#projects" class="btn">View Projects</a>
-  </header>
+  <main id="main">
+    <!-- ===== HERO ===== -->
+    <header id="home" class="hero section">
+      <div class="hero-bg" aria-hidden="true">
+        <span class="blob blob-1"></span>
+        <span class="blob blob-2"></span>
+        <span class="blob blob-3"></span>
+      </div>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>Passionate student exploring the world of web development.</p>
-  </section>
+      <div class="hero-content">
+        <p class="hero-eyebrow reveal hero-reveal" style="--delay: 0ms">Hello, I'm</p>
+        <h1 class="hero-name reveal hero-reveal" style="--delay: 80ms">Rafa <span class="accent">Aydinfadhilah</span></h1>
+        <p class="hero-title reveal hero-reveal" style="--delay: 160ms">Aspiring Developer <span class="dot-sep">·</span> Student</p>
+        <p class="hero-desc reveal hero-reveal" style="--delay: 240ms">I'm a student learning to build clean, modern web experiences — one project at a time.</p>
+        <div class="hero-cta reveal hero-reveal" style="--delay: 320ms">
+          <a href="#projects" class="btn btn-primary">View Projects</a>
+          <a href="#contact" class="btn btn-ghost">Contact Me</a>
+        </div>
+      </div>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="project-grid">
-      <div class="project-card">Project Placeholder</div>
+      <a href="#about" class="scroll-hint" aria-label="Scroll to About section">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+      </a>
+    </header>
+
+    <!-- ===== ABOUT ===== -->
+    <section id="about" class="section">
+      <div class="container">
+        <header class="section-header reveal">
+          <p class="section-eyebrow">Who I Am</p>
+          <h2>About Me</h2>
+        </header>
+
+        <div class="about-grid">
+          <div class="about-visual reveal">
+            <div class="avatar" aria-hidden="true">
+              <span>RA</span>
+            </div>
+          </div>
+
+          <div class="about-body">
+            <p class="reveal">Hi, I'm Rafa — a high school student with a growing passion for web development. I started by tinkering with pages just to see how the pieces fit together, and it turned into building real, working sites for me and my classmates.</p>
+            <p class="reveal">Right now I'm focused on learning the fundamentals well: writing clean HTML, styling with modern CSS, and bringing pages to life with JavaScript.</p>
+
+            <div class="about-tags reveal">
+              <span class="tag">Web Development</span>
+              <span class="tag">UI Design</span>
+              <span class="tag">Problem Solving</span>
+            </div>
+
+            <div class="info-cards">
+              <div class="info-card reveal" style="--delay: 0ms"><span class="info-label">Location</span><span class="info-value">Indonesia</span></div>
+              <div class="info-card reveal" style="--delay: 80ms"><span class="info-label">Education</span><span class="info-value">High School Student</span></div>
+              <div class="info-card reveal" style="--delay: 160ms"><span class="info-label">Main Focus</span><span class="info-value">Web Development</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SKILLS ===== -->
+    <section id="skills" class="section">
+      <div class="container">
+        <header class="section-header reveal">
+          <p class="section-eyebrow">What I Use</p>
+          <h2>Skills</h2>
+        </header>
+
+        <div class="skills-grid">
+          <article class="skill-card reveal" style="--delay: 0ms">
+            <h3 class="skill-title">Frontend</h3>
+            <ul class="skill-list">
+              <li><span class="skill-dot" style="--dot: #e34f26"></span>HTML</li>
+              <li><span class="skill-dot" style="--dot: #264de4"></span>CSS</li>
+              <li><span class="skill-dot" style="--dot: #f7df1e"></span>JavaScript</li>
+            </ul>
+          </article>
+
+          <article class="skill-card reveal" style="--delay: 80ms">
+            <h3 class="skill-title">Tools</h3>
+            <ul class="skill-list">
+              <li><span class="skill-dot" style="--dot: #f05033"></span>Git</li>
+              <li><span class="skill-dot" style="--dot: #6cc644"></span>GitHub</li>
+              <li><span class="skill-dot" style="--dot: #007acc"></span>VS Code</li>
+            </ul>
+          </article>
+
+          <article class="skill-card reveal" style="--delay: 160ms">
+            <h3 class="skill-title">Currently Learning</h3>
+            <ul class="skill-list">
+              <li><span class="skill-dot" style="--dot: var(--accent-2)"></span>Advanced JavaScript</li>
+              <li><span class="skill-dot" style="--dot: #3178c6"></span>TypeScript</li>
+              <li><span class="skill-dot" style="--dot: #61dafb"></span>React</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PROJECTS ===== -->
+    <section id="projects" class="section">
+      <div class="container">
+        <header class="section-header reveal">
+          <p class="section-eyebrow">My Work</p>
+          <h2>Projects</h2>
+        </header>
+
+        <div class="projects-grid">
+          <article class="project-card reveal" style="--delay: 0ms">
+            <div class="project-thumb thumb-class-site" aria-hidden="true">
+              <span class="thumb-label">Class Website</span>
+            </div>
+            <div class="project-body">
+              <h3>Class X-D Website</h3>
+              <p>A single-page dark-themed site for my class — schedule, rules, members, and updates. Data-driven with a full Indonesian/English toggle.</p>
+              <div class="project-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+              <div class="project-actions">
+                <a href="#" class="btn btn-small btn-ghost" aria-label="View source on GitHub (placeholder)">GitHub</a>
+                <a href="#" class="btn btn-small btn-primary" aria-label="Open live demo (placeholder)">Live Demo</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal" style="--delay: 80ms">
+            <div class="project-thumb thumb-portfolio" aria-hidden="true">
+              <span class="thumb-label">Portfolio</span>
+            </div>
+            <div class="project-body">
+              <h3>Personal Portfolio</h3>
+              <p>This site — a premium, responsive portfolio with animated sections, a light/dark theme, and a working (frontend-only) contact form.</p>
+              <div class="project-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+              <div class="project-actions">
+                <a href="#" class="btn btn-small btn-ghost" aria-label="View source on GitHub (placeholder)">GitHub</a>
+                <a href="#" class="btn btn-small btn-primary" aria-label="Open live demo (placeholder)">Live Demo</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal" style="--delay: 160ms">
+            <div class="project-thumb thumb-next" aria-hidden="true">
+              <span class="thumb-label">Next Project</span>
+            </div>
+            <div class="project-body">
+              <h3>Coming Soon</h3>
+              <p>Something new is in progress. Check back soon to see what I'm building next as I level up my skills.</p>
+              <div class="project-tags"><span>In Progress</span></div>
+              <div class="project-actions">
+                <a href="#" class="btn btn-small btn-ghost" aria-label="View source on GitHub (placeholder)" aria-disabled="true">GitHub</a>
+                <a href="#" class="btn btn-small btn-ghost" aria-label="Open live demo (placeholder)" aria-disabled="true">Live Demo</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== EXPERIENCE / JOURNEY ===== -->
+    <section id="experience" class="section">
+      <div class="container">
+        <header class="section-header reveal">
+          <p class="section-eyebrow">My Journey</p>
+          <h2>Experience</h2>
+        </header>
+
+        <div class="timeline">
+          <article class="timeline-item reveal" style="--delay: 0ms">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <time class="timeline-date">2025</time>
+              <h3>Started Learning Web Development</h3>
+              <p>Picked up HTML and CSS, built my first simple pages, and got hooked on making things with code.</p>
+            </div>
+          </article>
+
+          <article class="timeline-item reveal" style="--delay: 80ms">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <time class="timeline-date">2026</time>
+              <h3>Learning JavaScript &amp; Building Projects</h3>
+              <p>Diving into JavaScript, animations, and real projects — including this portfolio and a full class website.</p>
+            </div>
+          </article>
+
+          <article class="timeline-item reveal" style="--delay: 160ms">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <time class="timeline-date">Future</time>
+              <h3>Modern Frontend Technologies</h3>
+              <p>Next up: advanced JavaScript, TypeScript, and React — and shipping bigger, better projects.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section id="contact" class="section">
+      <div class="container">
+        <header class="section-header reveal">
+          <p class="section-eyebrow">Get In Touch</p>
+          <h2>Contact</h2>
+        </header>
+
+        <div class="contact-grid">
+          <div class="contact-info reveal">
+            <h3>Let's connect</h3>
+            <p>Got a question, a project idea, or just want to say hi? My inbox is always open.</p>
+            <ul class="contact-links">
+              <li>
+                <a href="mailto:rafa@example.com" class="contact-link">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+                  <span>rafa@example.com</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="contact-link" aria-label="GitHub profile (placeholder)">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 .3 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.9 6 5.5-.6.6-1 1.4-1 3.5v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                  <span>github.com/rafa</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="contact-link" aria-label="LinkedIn profile (placeholder)">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                  <span>linkedin.com/in/rafa</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="contact-form-wrap reveal" style="--delay: 100ms">
+            <form id="contactForm" class="contact-form" novalidate>
+              <div class="field">
+                <label for="cfName">Name</label>
+                <input type="text" id="cfName" name="name" autocomplete="name" placeholder="Your name" required>
+                <p class="field-error" id="cfNameError" role="alert" hidden>Please enter your name.</p>
+              </div>
+              <div class="field">
+                <label for="cfEmail">Email</label>
+                <input type="email" id="cfEmail" name="email" autocomplete="email" placeholder="you@example.com" required>
+                <p class="field-error" id="cfEmailError" role="alert" hidden>Please enter a valid email address.</p>
+              </div>
+              <div class="field">
+                <label for="cfMessage">Message</label>
+                <textarea id="cfMessage" name="message" rows="4" placeholder="Write your message..." required></textarea>
+                <p class="field-error" id="cfMessageError" role="alert" hidden>Please write a message.</p>
+              </div>
+              <button type="submit" class="btn btn-primary btn-block" id="cfSubmit">Send Message</button>
+            </form>
+
+            <div class="form-success" id="formSuccess" role="status" hidden>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4 12 14.01l-3-3"/></svg>
+              <h3>Thanks!</h3>
+              <p>Your message UI has been submitted successfully.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <p class="footer-brand">Designed &amp; Built by <span class="accent">Rafa Aydinfadhilah</span></p>
+      <p class="footer-copy">© <span id="year">2026</span> All rights reserved.</p>
     </div>
-  </section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <form id="contact-form">
-      <input type="text" placeholder="Name" required>
-      <input type="email" placeholder="Email" required>
-      <textarea placeholder="Message" required></textarea>
-      <button type="submit">Send</button>
-    </form>
-  </section>
+  </footer>
 
   <script src="js/script.js"></script>
 </body>
