@@ -13,7 +13,7 @@ const translations = {
   'nav-location': { id: 'Lokasi', en: 'Location' },
 
   // Section headers
-  'hero-tagline': { id: 'Tahun Ajaran 2025–2026 · Ruang Kelas X-D', en: '2025–2026 Academic Year · Homeroom X-D' },
+  'hero-tagline': { id: 'Tahun Ajaran 2026–2027 · Ruang Kelas X-D', en: '2026–2027 Academic Year · Homeroom X-D' },
   'structure-title': { id: 'Struktur Kelas', en: 'Class Structure' },
   'structure-subtitle': { id: 'Tim pengurus kelas kami', en: 'Our leadership team for the year' },
   'rules-title': { id: 'Aturan Kelas', en: 'Class Rules' },
