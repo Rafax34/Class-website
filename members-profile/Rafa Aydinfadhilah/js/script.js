@@ -137,3 +137,77 @@ if (form) {
 
 // ===== Footer year =====
 document.getElementById('year').textContent = new Date().getFullYear();
+
+// ===== Scroll progress bar =====
+const scrollProgress = document.getElementById('scrollProgress');
+function updateScrollProgress() {
+  const doc = document.documentElement;
+  const max = doc.scrollHeight - doc.clientHeight;
+  scrollProgress.style.width = (max > 0 ? (window.scrollY / max) * 100 : 0) + '%';
+}
+window.addEventListener('scroll', updateScrollProgress, { passive: true });
+updateScrollProgress();
+
+// ===== Typewriter (hero roles) =====
+const twText = document.getElementById('twText');
+if (twText) {
+  const roles = ['Aspiring Developer', 'Student', 'Web Enthusiast'];
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    twText.textContent = roles[0];
+  } else {
+    let ri = 0, ci = 0, deleting = false;
+    (function tick() {
+      const role = roles[ri];
+      if (!deleting) {
+        twText.textContent = role.slice(0, ++ci);
+        if (ci === role.length) { deleting = true; setTimeout(tick, 1700); return; }
+        setTimeout(tick, 70);
+      } else {
+        twText.textContent = role.slice(0, --ci);
+        if (ci === 0) { deleting = false; ri = (ri + 1) % roles.length; setTimeout(tick, 420); return; }
+        setTimeout(tick, 40);
+      }
+    })();
+  }
+}
+
+// ===== Infinite marquee =====
+const marqueeTrack = document.getElementById('marqueeTrack');
+if (marqueeTrack) {
+  const items = ['HTML', 'CSS', 'JavaScript', 'C++', 'Git', 'GitHub', 'VS Code', 'React', 'AI'];
+  const group = items
+    .map((t) => `<span class="marquee-item">${t}<span class="m-dot" aria-hidden="true">✦</span></span>`)
+    .join('');
+  marqueeTrack.insertAdjacentHTML('beforeend', group + group);
+}
+
+// ===== Magnetic buttons & 3D tilt (pointer devices only) =====
+const finePointer =
+  matchMedia('(hover: hover) and (pointer: fine)').matches &&
+  !matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+if (finePointer) {
+  document.querySelectorAll('[data-magnetic]').forEach((btn) => {
+    btn.addEventListener('pointermove', (e) => {
+      const r = btn.getBoundingClientRect();
+      const x = e.clientX - (r.left + r.width / 2);
+      const y = e.clientY - (r.top + r.height / 2);
+      btn.style.transform = `translate(${(x * 0.3).toFixed(1)}px, ${(y * 0.3).toFixed(1)}px)`;
+    });
+    btn.addEventListener('pointerleave', () => { btn.style.transform = ''; });
+  });
+
+  document.querySelectorAll('[data-tilt]').forEach((card) => {
+    card.addEventListener('pointermove', (e) => {
+      const r = card.getBoundingClientRect();
+      const px = (e.clientX - r.left) / r.width - 0.5;
+      const py = (e.clientY - r.top) / r.height - 0.5;
+      card.style.transition = 'transform 0.08s ease-out';
+      card.style.transform = `perspective(900px) rotateX(${(-py * 8).toFixed(2)}deg) rotateY(${(px * 8).toFixed(2)}deg)`;
+    });
+    card.addEventListener('pointerleave', () => {
+      card.style.transition = '';
+      card.style.transform = '';
+    });
+  });
+}
