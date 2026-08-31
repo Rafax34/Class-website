@@ -291,9 +291,9 @@ const memoryData = [
 const announcementsData = [
   // [EDIT ME] Ganti dengan pengumuman kelas kalian sendiri.
   { typeKey: 'ann-schedule', title: 'Pengambilan Buku Paket', date: '2026-08-31', text: 'Bawa sampul bening dan alat untuk memasang. Tanggal pasti menyusul.' },
-  { typeKey: 'ann-school', title: 'Foto Bersama Angkatan', date: '2026-09-04', text: 'Foto angkatan dilaksanakan minggu depan. Wajib memakai seragam lengkap.' },
-  { typeKey: 'ann-assignment', title: 'Ulangan Tengah Semester', date: '2026-09-14', text: 'UTS dimulai pekan depan sesuai jadwal. Kerjakan tugas tepat waktu dan belajar dengan maksimal.' },
-  { typeKey: 'ann-activity', title: 'Bakti Sosial Kelas', date: '2026-09-19', text: 'Kunjungan bersama wali kelas. Siapkan pembicaraan dengan orang tua.' },
+  { typeKey: 'ann-school', title: 'Kosong', date: '2026-09-04', text: 'Kosong' },
+  { typeKey: 'ann-assignment', title: 'kosong', date: '2026-09-14', text: 'kosong' },
+  { typeKey: 'ann-activity', title: 'kosong', date: '2026-09-19', text: 'Kosong' },
 ];
 
 const statsData = [
@@ -304,18 +304,18 @@ const statsData = [
 ];
 
 const eventsData = [
-  { date: '2026-09-14', title: 'Ulangan Tengah Semester', desc: 'Semua mata pelajaran sesuai jadwal.', statusKey: 'event-soon' },
-  { date: '2026-09-19', title: 'Bakti Sosial Kelas', desc: 'Kunjungan ke panti asuhan bersama wali kelas.', statusKey: 'event-upcoming' },
-  { date: '2026-09-26', title: 'Pertandingan Antar Kelas', desc: 'Cabang olahraga dan seni antar kelas X.', statusKey: 'event-upcoming' },
-  { date: '2026-10-16', title: 'Class Outing', desc: 'Study tour ke museum daerah bersama guru.', statusKey: 'event-upcoming' },
+  { date: '2026-09-14', title: 'Kosong', desc: 'kosong', statusKey: 'event-soon' },
+  { date: '2026-09-19', title: 'kosong', desc: 'kosong', statusKey: 'event-upcoming' },
+  { date: '2026-09-26', title: 'kosong', desc: 'kosong', statusKey: 'event-upcoming' },
+  { date: '2026-10-16', title: 'kosong', desc: 'kosong', statusKey: 'event-upcoming' },
 ];
 
 const achievementsData = [
   // [EDIT ME] Ganti dengan prestasi kelas kalian sendiri.
-  { categoryKey: 'ach-competition', title: 'Juara 3 Futsal Antar Kelas', date: '2026', desc: 'Tim futsal X-D meraih juara ketiga dalam turnamen sekolah.' },
-  { categoryKey: 'ach-award', title: 'Siswa Teladan Bulan Ini', date: '2026', desc: 'Anggota kelas terpilih sebagai siswa teladan oleh wali kelas.' },
-  { categoryKey: 'ach-milestone', title: 'Kehadiran Penuh', date: '2026', desc: 'Kelas X-D mencatatkan kehadiran 100% selama satu bulan penuh.' },
-  { categoryKey: 'ach-certificate', title: 'Piket Terbaik', date: '2026', desc: 'Penghargaan kebersihan kelas terbaik dari sekolah.' },
+  { categoryKey: 'ach-competition', title: 'Kosong', date: '2026', desc: 'kosong' },
+  { categoryKey: 'ach-award', title: 'Kosong', date: '2026', desc: 'Kosong' },
+  { categoryKey: 'ach-milestone', title: 'Kosong', date: '2026', desc: 'Kosong' },
+  { categoryKey: 'ach-certificate', title: 'Kosong', date: '2026', desc: 'Kosong' },
 ];
 
 const quotesData = [
