@@ -406,6 +406,64 @@ function setLastUpdated() {
   }
 }
 
+// ===== MICRO INTERACTIONS =====
+function renderMarquee() {
+  const track = document.getElementById('marqueeTrack');
+  if (!track) return;
+  const words = ['Struktur Kelas', 'Aturan', 'Jadwal', 'Guru', 'Piket', 'PR', 'Anggota', 'Kenangan'];
+  const half = words.map(w => `<span>${w} <b class="mark">XD</b></span>`).join('');
+  // Duplicate for a seamless -50% loop
+  track.innerHTML = half + half;
+}
+
+function initTilt() {
+  if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const cards = document.querySelectorAll('.org-card');
+  cards.forEach(card => {
+    card.addEventListener('mouseenter', () => {
+      card.style.transition = 'transform 120ms ease-out';
+    });
+    card.addEventListener('mousemove', e => {
+      const r = card.getBoundingClientRect();
+      const px = (e.clientX - r.left) / r.width;
+      const py = (e.clientY - r.top) / r.height;
+      const rx = (0.5 - py) * 14;
+      const ry = (px - 0.5) * 14;
+      card.style.transform = `perspective(700px) rotateX(${rx}deg) rotateY(${ry}deg)`;
+    });
+    card.addEventListener('mouseleave', () => {
+      card.style.transition = '';
+      card.style.transform = '';
+    });
+  });
+}
+
+function initSpotlight() {
+  if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+  const cards = document.querySelectorAll('.member-card');
+  cards.forEach(card => {
+    card.addEventListener('mousemove', e => {
+      const r = card.getBoundingClientRect();
+      card.style.setProperty('--spot-x', (e.clientX - r.left) + 'px');
+      card.style.setProperty('--spot-y', (e.clientY - r.top) + 'px');
+    });
+  });
+}
+
+function initMagnetic() {
+  if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const btns = document.querySelectorAll('.member-view-btn');
+  btns.forEach(btn => {
+    btn.addEventListener('mousemove', e => {
+      const r = btn.getBoundingClientRect();
+      btn.style.transform = 'translate(' + (e.clientX - (r.left + r.width / 2)) * 0.25 + 'px, ' + (e.clientY - (r.top + r.height / 2)) * 0.25 + 'px)';
+    });
+    btn.addEventListener('mouseleave', () => { btn.style.transform = ''; });
+  });
+}
+
 // ===== LANGUAGE TOGGLE =====
 function initLangToggle() {
   const toggle = document.getElementById('langToggle');
@@ -424,8 +482,11 @@ function initLangToggle() {
     renderCleaning();
     renderMembers();
 
-    // Re-init scroll animations for new elements
+    // Re-init scroll animations + micro interactions for new elements
     initScrollAnimations();
+    initTilt();
+    initSpotlight();
+    initMagnetic();
   });
 }
 
@@ -512,8 +573,12 @@ document.addEventListener('DOMContentLoaded', () => {
   renderHomework();
   renderMembers();
   renderMemory();
+  renderMarquee();
   setLastUpdated();
   initLangToggle();
+  initTilt();
+  initSpotlight();
+  initMagnetic();
   initNavToggle();
   initActiveNav();
   initScrollTop();
