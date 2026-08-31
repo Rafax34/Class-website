@@ -11,6 +11,10 @@ const translations = {
   'nav-members': { id: 'Anggota', en: 'Members' },
   'nav-memory': { id: 'Kenangan', en: 'Memory' },
   'nav-location': { id: 'Lokasi', en: 'Location' },
+  'nav-announcements': { id: 'Pengumuman', en: 'Announcements' },
+  'nav-events': { id: 'Acara', en: 'Events' },
+  'nav-achievements': { id: 'Prestasi', en: 'Achievements' },
+  'nav-interactive': { id: 'Interaktif', en: 'Interactive' },
 
   // Section headers
   'hero-tagline': { id: 'Tahun Ajaran 2026–2027 · Ruang Kelas X-D', en: '2026–2027 Academic Year · Homeroom X-D' },
@@ -33,6 +37,14 @@ const translations = {
   'location-room': { id: 'Ruang Kelas', en: 'Homeroom' },
   'location-room-text': { id: 'Gedung B, Ruang X-D', en: 'Building B, Room X-D' },
   'last-updated': { id: 'Terakhir diperbarui:', en: 'Last updated:' },
+  'announcements-title': { id: 'Pengumuman', en: 'Announcements' },
+  'announcements-subtitle': { id: 'Informasi dan kabar terbaru kelas', en: 'Latest class news and info' },
+  'events-title': { id: 'Acara Mendatang', en: 'Upcoming Events' },
+  'events-subtitle': { id: 'Agenda dan kegiatan yang akan datang', en: 'What is coming up for the class' },
+  'achievements-title': { id: 'Prestasi Kelas', en: 'Class Achievements' },
+  'achievements-subtitle': { id: 'Perjalanan dan pencapaian kami', en: 'Our milestones and wins' },
+  'interactive-title': { id: 'Coba Interaktif', en: 'Interactive' },
+  'interactive-subtitle': { id: 'Cara seru menjelajahi kelas', en: 'Fun ways to explore the class' },
 
   // Memory section
   'memory-title': { id: 'Kenangan Kelas', en: 'Class Memory' },
@@ -93,6 +105,43 @@ const translations = {
   'day-wed': { id: 'Rabu', en: 'Wednesday' },
   'day-thu': { id: 'Kamis', en: 'Thursday' },
   'day-fri': { id: 'Jumat', en: 'Friday' },
+
+  // Announcement types
+  'ann-assignment': { id: 'Tugas', en: 'Assignment' },
+  'ann-school': { id: 'Sekolah', en: 'School' },
+  'ann-activity': { id: 'Kegiatan', en: 'Activity' },
+  'ann-schedule': { id: 'Jadwal', en: 'Schedule' },
+
+  // Stats
+  'stat-students': { id: 'Siswa', en: 'Students' },
+  'stat-teachers': { id: 'Guru', en: 'Teachers' },
+  'stat-subjects': { id: 'Mata Pelajaran', en: 'Subjects' },
+  'stat-year': { id: 'Tahun Ajaran', en: 'Academic Year' },
+
+  // Event statuses
+  'event-upcoming': { id: 'Akan Datang', en: 'Upcoming' },
+  'event-soon': { id: 'Segera', en: 'Soon' },
+
+  // Achievement categories
+  'ach-competition': { id: 'Lomba', en: 'Competition' },
+  'ach-award': { id: 'Penghargaan', en: 'Award' },
+  'ach-milestone': { id: 'Momen Penting', en: 'Milestone' },
+  'ach-certificate': { id: 'Sertifikat', en: 'Certificate' },
+
+  // Interactive tools
+  'tool-student': { id: 'Acak Siswa', en: 'Student Picker' },
+  'tool-student-desc': { id: 'Pilih nama teman sekelas secara acak', en: 'Pick a random classmate' },
+  'tool-quote': { id: 'Kutipan Kelas', en: 'Class Quote' },
+  'tool-quote-desc': { id: 'Kutipan penyemangat untuk hari ini', en: 'A random word of motivation' },
+  'tool-cleaning': { id: 'Piket Hari Ini', en: 'Duty Today' },
+  'tool-cleaning-desc': { id: 'Cari tahu siapa yang piket hari ini', en: 'Who is on cleaning duty today?' },
+  'tool-memory': { id: 'Kenangan Acak', en: 'Random Memory' },
+  'tool-memory-desc': { id: 'Flashback momen kelas yang tak terlupakan', en: 'Flashback to a class memory' },
+  'tool-action-pick': { id: 'Acak Sekarang', en: 'Pick Now' },
+  'tool-action-quote': { id: 'Kutipan Baru', en: 'New Quote' },
+  'tool-action-duty': { id: 'Lihat Piket', en: 'Show Duty' },
+  'tool-action-memory': { id: 'Tampilkan', en: 'Show' },
+  'tool-weekend': { id: 'Akhir pekan — piket diliburkan, istirahat dulu!', en: 'Weekend — no cleaning duty, take a break!' },
 };
 
 // Current language
@@ -239,6 +288,45 @@ const memoryData = [
   { caption: 'Kosong', date: '2025-12-20', photo: null },
 ];
 
+const announcementsData = [
+  // [EDIT ME] Ganti dengan pengumuman kelas kalian sendiri.
+  { typeKey: 'ann-schedule', title: 'Pengambilan Buku Paket', date: '2026-08-31', text: 'Bawa sampul bening dan alat untuk memasang. Tanggal pasti menyusul.' },
+  { typeKey: 'ann-school', title: 'Foto Bersama Angkatan', date: '2026-09-04', text: 'Foto angkatan dilaksanakan minggu depan. Wajib memakai seragam lengkap.' },
+  { typeKey: 'ann-assignment', title: 'Ulangan Tengah Semester', date: '2026-09-14', text: 'UTS dimulai pekan depan sesuai jadwal. Kerjakan tugas tepat waktu dan belajar dengan maksimal.' },
+  { typeKey: 'ann-activity', title: 'Bakti Sosial Kelas', date: '2026-09-19', text: 'Kunjungan bersama wali kelas. Siapkan pembicaraan dengan orang tua.' },
+];
+
+const statsData = [
+  { labelKey: 'stat-students', value: membersData.length, animate: true },
+  { labelKey: 'stat-teachers', value: teachersData.length, animate: true },
+  { labelKey: 'stat-subjects', value: new Set(teachersData.map(x => x.subjectKey)).size, animate: true },
+  { labelKey: 'stat-year', value: '2026/2027', animate: false },
+];
+
+const eventsData = [
+  { date: '2026-09-14', title: 'Ulangan Tengah Semester', desc: 'Semua mata pelajaran sesuai jadwal.', statusKey: 'event-soon' },
+  { date: '2026-09-19', title: 'Bakti Sosial Kelas', desc: 'Kunjungan ke panti asuhan bersama wali kelas.', statusKey: 'event-upcoming' },
+  { date: '2026-09-26', title: 'Pertandingan Antar Kelas', desc: 'Cabang olahraga dan seni antar kelas X.', statusKey: 'event-upcoming' },
+  { date: '2026-10-16', title: 'Class Outing', desc: 'Study tour ke museum daerah bersama guru.', statusKey: 'event-upcoming' },
+];
+
+const achievementsData = [
+  // [EDIT ME] Ganti dengan prestasi kelas kalian sendiri.
+  { categoryKey: 'ach-competition', title: 'Juara 3 Futsal Antar Kelas', date: '2026', desc: 'Tim futsal X-D meraih juara ketiga dalam turnamen sekolah.' },
+  { categoryKey: 'ach-award', title: 'Siswa Teladan Bulan Ini', date: '2026', desc: 'Anggota kelas terpilih sebagai siswa teladan oleh wali kelas.' },
+  { categoryKey: 'ach-milestone', title: 'Kehadiran Penuh', date: '2026', desc: 'Kelas X-D mencatatkan kehadiran 100% selama satu bulan penuh.' },
+  { categoryKey: 'ach-certificate', title: 'Piket Terbaik', date: '2026', desc: 'Penghargaan kebersihan kelas terbaik dari sekolah.' },
+];
+
+const quotesData = [
+  { id: 'Bersatu kita teguh, bercerai kita runtuh.', en: 'United we stand, divided we fall.' },
+  { id: 'Belajar hari ini, jadi pintar besok.', en: 'Learn today, be smart tomorrow.' },
+  { id: 'Sekali X-D, tetap X-D.', en: 'Once X-D, always X-D.' },
+  { id: 'Kecil kuncup, jadi bunga.', en: 'From a small bud grows a flower.' },
+  { id: 'Kebersihan sebagian dari iman.', en: 'Cleanliness is next to godliness.' },
+  { id: 'Terus mencoba, esok pasti lebih baik.', en: 'Keep trying — tomorrow will be better.' },
+];
+
 // ===== RENDER FUNCTIONS =====
 function renderOrgChart() {
   const container = document.getElementById('orgChart');
@@ -339,7 +427,7 @@ function renderHomework() {
     <article class="announcement fade-up" style="transition-delay: ${i * 0.05}s">
       <header class="announcement-header">
         <h3>${h.title}</h3>
-        <time class="date" datetime="${h.date}">${new Date(h.date).toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' })}</time>
+        <time class="date" datetime="${h.date}">${formatDate(h.date)}</time>
       </header>
       <p>${h.text}</p>
     </article>
@@ -367,10 +455,209 @@ function renderMemory() {
       <div class="memory-photo" aria-hidden="true">${m.photo ? `<img src="${m.photo}" alt="">` : '<svg viewBox="0 0 4 3" class="placeholder-img"><rect fill="#1a1a2e" width="4" height="3"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#4a4a6a" font-family="Space Grotesk" font-size="0.3">Photo</text></svg>'}</div>
       <div class="memory-info">
         <div class="memory-caption">${m.caption}</div>
-        <time class="memory-date" datetime="${m.date}">${new Date(m.date).toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' })}</time>
+        <time class="memory-date" datetime="${m.date}">${formatDate(m.date)}</time>
       </div>
     </article>
   `).join('');
+}
+
+function parseDate(iso) {
+  const [y, m, d] = String(iso).split('-').map(Number);
+  return new Date(y || 1970, (m || 1) - 1, d || 1);
+}
+
+function formatDate(iso) {
+  return parseDate(iso).toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' });
+}
+
+function animateCount(el, target) {
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce || !target || typeof target !== 'number' || !('requestAnimationFrame' in window)) {
+    el.textContent = target;
+    return;
+  }
+  const dur = 1100;
+  const start = performance.now();
+  (function frame(now) {
+    const p = Math.min((now - start) / dur, 1);
+    el.textContent = Math.round(target * (1 - Math.pow(1 - p, 3)));
+    if (p < 1) requestAnimationFrame(frame);
+    else el.textContent = target;
+  })(performance.now());
+}
+
+// Stats — animate numbers once when the band enters the viewport
+let statsFinished = false;
+
+function renderStats() {
+  const grid = document.getElementById('statsGrid');
+  grid.innerHTML = statsData.map((s, i) => `
+    <article class="stat-card fade-up" style="transition-delay: ${i * 0.06}s">
+      <span class="stat-value" aria-label="${s.value}">0</span>
+      <span class="stat-label" data-translate="${s.labelKey}">${t(s.labelKey)}</span>
+    </article>
+  `).join('');
+
+  if (statsFinished) {
+    grid.querySelectorAll('.stat-value').forEach((el, i) => { el.textContent = statsData[i].value; });
+  } else {
+    initStatsCounter();
+  }
+}
+
+function initStatsCounter() {
+  const cards = Array.from(document.querySelectorAll('#statsGrid .stat-card'));
+  if (!cards.length) return;
+  let done = 0;
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const card = entry.target;
+      const s = statsData.find(x => x.labelKey === card.querySelector('.stat-label').dataset.translate);
+      const el = card.querySelector('.stat-value');
+      if (s) { if (s.animate) animateCount(el, s.value); else el.textContent = s.value; }
+      obs.unobserve(card);
+      if (++done === cards.length) statsFinished = true;
+    });
+  }, { threshold: 0.4 });
+  cards.forEach(c => obs.observe(c));
+}
+
+function renderAnnouncements() {
+  const container = document.getElementById('announceList');
+  container.innerHTML = announcementsData.map((a, i) => `
+    <article class="announce-item fade-up" style="transition-delay: ${i * 0.04}s">
+      <span class="ann-type" data-translate="${a.typeKey}">${t(a.typeKey)}</span>
+      <div class="ann-body">
+        <div class="ann-head">
+          <h3>${a.title}</h3>
+          <time class="ann-date" datetime="${a.date}">${formatDate(a.date)}</time>
+        </div>
+        <p>${a.text}</p>
+      </div>
+    </article>
+  `).join('');
+}
+
+function renderEvents() {
+  const container = document.getElementById('eventsGrid');
+  container.innerHTML = eventsData.map((e, i) => {
+    const d = parseDate(e.date);
+    return `
+    <article class="event-card fade-up" style="transition-delay: ${i * 0.05}s">
+      <div class="event-date" aria-hidden="true">
+        <span class="event-day">${d.getDate()}</span>
+        <span class="event-month">${d.toLocaleDateString(undefined, { month: 'short' })}</span>
+      </div>
+      <div class="event-body">
+        <span class="event-status" data-translate="${e.statusKey}">${t(e.statusKey)}</span>
+        <h3>${e.title}</h3>
+        <p>${e.desc}</p>
+      </div>
+    </article>
+  `;
+  }).join('');
+}
+
+function renderAchievements() {
+  const container = document.getElementById('achievementsGrid');
+  container.innerHTML = achievementsData.map((a, i) => `
+    <article class="achievement-card fade-up" style="transition-delay: ${i * 0.05}s">
+      <div class="ach-head">
+        <span class="ach-cat" data-translate="${a.categoryKey}">${t(a.categoryKey)}</span>
+        <span class="ach-date">${a.date}</span>
+      </div>
+      <h3>${a.title}</h3>
+      <p>${a.desc}</p>
+    </article>
+  `).join('');
+}
+
+function renderTools() {
+  const container = document.getElementById('toolsGrid');
+  container.innerHTML = `
+    <article class="tool-card fade-up">
+      <h3 data-translate="tool-student">${t('tool-student')}</h3>
+      <p data-translate="tool-student-desc">${t('tool-student-desc')}</p>
+      <div class="tool-output" id="toolStudent" aria-live="polite"><span class="tool-sub">&mdash;</span></div>
+      <button class="tool-btn" data-tool="student" data-translate="tool-action-pick">${t('tool-action-pick')}</button>
+    </article>
+    <article class="tool-card fade-up">
+      <h3 data-translate="tool-quote">${t('tool-quote')}</h3>
+      <p data-translate="tool-quote-desc">${t('tool-quote-desc')}</p>
+      <div class="tool-output" id="toolQuote" aria-live="polite"><span class="tool-sub">&mdash;</span></div>
+      <button class="tool-btn" data-tool="quote" data-translate="tool-action-quote">${t('tool-action-quote')}</button>
+    </article>
+    <article class="tool-card fade-up">
+      <h3 data-translate="tool-cleaning">${t('tool-cleaning')}</h3>
+      <p data-translate="tool-cleaning-desc">${t('tool-cleaning-desc')}</p>
+      <div class="tool-output" id="toolDuty" aria-live="polite"><span class="tool-sub">&mdash;</span></div>
+      <button class="tool-btn" data-tool="duty" data-translate="tool-action-duty">${t('tool-action-duty')}</button>
+    </article>
+    <article class="tool-card fade-up">
+      <h3 data-translate="tool-memory">${t('tool-memory')}</h3>
+      <p data-translate="tool-memory-desc">${t('tool-memory-desc')}</p>
+      <div class="tool-output" id="toolMemory" aria-live="polite"><span class="tool-sub">&mdash;</span></div>
+      <button class="tool-btn" data-tool="memory" data-translate="tool-action-memory">${t('tool-action-memory')}</button>
+    </article>
+  `;
+}
+
+function getDutyToday() {
+  const map = { 1: 'day-mon', 2: 'day-tue', 3: 'day-wed', 4: 'day-thu', 5: 'day-fri' };
+  const key = map[new Date().getDay()];
+  if (!key) return null;
+  return cleaningData.find(c => c.dayKey === key) || null;
+}
+
+function showDuty() {
+  const el = document.getElementById('toolDuty');
+  const duty = getDutyToday();
+  if (!duty) {
+    el.innerHTML = `<span class="tool-sub">${t('tool-weekend')}</span>`;
+    return;
+  }
+  el.innerHTML = `<span class="tool-name">${t(duty.dayKey)}</span><span class="tool-sub">${duty.students}</span>`;
+}
+
+function pickStudent() {
+  const m = membersData[Math.floor(Math.random() * membersData.length)];
+  document.getElementById('toolStudent').innerHTML =
+    `<span class="tool-name">${m.name}</span><span class="tool-sub" data-translate="${m.roleKey}">${t(m.roleKey)}</span>`;
+}
+
+let lastQuoteIndex = -1;
+function showQuote() {
+  let i = Math.floor(Math.random() * quotesData.length);
+  if (i === lastQuoteIndex) i = (i + 1) % quotesData.length;
+  lastQuoteIndex = i;
+  document.getElementById('toolQuote').innerHTML =
+    `<span class="tool-name">&ldquo;${quotesData[i][currentLang]}&rdquo;</span>`;
+}
+
+function showMemory() {
+  const withPhoto = memoryData.filter(m => m.photo);
+  const pool = withPhoto.length ? withPhoto : memoryData;
+  const m = pool[Math.floor(Math.random() * pool.length)];
+  document.getElementById('toolMemory').innerHTML =
+    `<span class="tool-name">${m.caption}</span><span class="tool-sub">${formatDate(m.date)}</span>`;
+}
+
+function bindTools() {
+  const grid = document.getElementById('toolsGrid');
+  grid.addEventListener('click', e => {
+    const btn = e.target.closest('.tool-btn');
+    if (!btn) return;
+    const tool = btn.dataset.tool;
+    if (tool === 'student') pickStudent();
+    else if (tool === 'quote') showQuote();
+    else if (tool === 'duty') showDuty();
+    else if (tool === 'memory') showMemory();
+  });
+}
+
+function initTools() {
+  showDuty();
 }
 
 function updateStaticText() {
@@ -481,6 +768,12 @@ function initLangToggle() {
     renderTeachers();
     renderCleaning();
     renderMembers();
+    renderStats();
+    renderAnnouncements();
+    renderEvents();
+    renderAchievements();
+    renderTools();
+    initTools();
 
     // Re-init scroll animations + micro interactions for new elements
     initScrollAnimations();
@@ -574,12 +867,19 @@ document.addEventListener('DOMContentLoaded', () => {
   renderMembers();
   renderMemory();
   renderMarquee();
+  renderStats();
+  renderAnnouncements();
+  renderEvents();
+  renderAchievements();
+  renderTools();
   setLastUpdated();
   initLangToggle();
   initTilt();
   initSpotlight();
   initMagnetic();
   initNavToggle();
+  bindTools();
+  initTools();
   initActiveNav();
   initScrollTop();
   initScrollAnimations();
