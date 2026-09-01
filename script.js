@@ -211,8 +211,8 @@ const homeworkData = [
   { title: 'Biologi', date: '2026-8-11', text: 'Tugas Kelompok. Mulai mengerjakan ketika masuk kembali(Tatap muka). ada di WA.' },
   { title: 'Kimia', date: '2026-8-27', text: 'Tugas Cetak yang pdf Soal Kimia. Yang laboratorium di baca. pengumpulan saat masuk kembali.' },
   { title: 'Sosiologi', date: '2026-08-27', text: 'Print LKPD dan kerjakan di kertasnya. ada di WA. pengumpulan saat masuk kembali.' },
-  { title: 'kosong', date: '2026-08-29', text: 'kosong' },
-  { title: 'kosong', date: '2026-08-30', text: 'kosong' },
+  { title: 'Geografi', date: '2026-08-29', text: 'Ngerjekan Soal, ada di WA. Kumpul pas masuk kembali' },
+  { title: 'PPKN', date: '2026-08-30', text: 'Buat 40 soal Pilihan Ganda dan di jawab. boleh print.' },
 ];
 
 const membersData = [
