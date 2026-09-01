@@ -281,11 +281,11 @@ const cleaningData = [
 ];
 
 const memoryData = [
-  { caption: 'Hari Pertama Sekolah', date: '2025-07-14', photo: null },
-  { caption: 'Kosong', date: '2025-08-17', photo: null },
-  { caption: 'Kosong', date: '2025-09-20', photo: null },
-  { caption: 'Kosong', date: '2025-10-05', photo: null },
-  { caption: 'Kosong', date: '2025-12-20', photo: null },
+  { caption: 'Hari Pertama Sekolah', date: '2026-07-14', photo: null },
+  { caption: 'Kosong', date: '2026-08-17', photo: null },
+  { caption: 'Kosong', date: '2026-09-20', photo: null },
+  { caption: 'Kosong', date: '2026-10-05', photo: null },
+  { caption: 'Kosong', date: '2026-12-20', photo: null },
 ];
 
 const announcementsData = [
@@ -688,7 +688,7 @@ function updateStaticText() {
 
 function setLastUpdated() {
   const el = document.getElementById('lastUpdated');
-  if (el && el.textContent.includes('EDIT ME')) {
+  if (el) {
     el.textContent = new Date().toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' });
   }
 }
