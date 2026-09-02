@@ -174,7 +174,7 @@ if (twText) {
 // ===== Infinite marquee =====
 const marqueeTrack = document.getElementById('marqueeTrack');
 if (marqueeTrack) {
-  const items = ['HTML', 'CSS', 'JavaScript', 'C++', 'Git', 'GitHub', 'VS Code', 'React', 'AI'];
+  const items = ['HTML', 'CSS', 'JavaScript', 'C++', 'Git', 'GitHub', 'VS Code', 'React', 'Claude'];
   const group = items
     .map((t) => `<span class="marquee-item">${t}<span class="m-dot" aria-hidden="true">✦</span></span>`)
     .join('');
