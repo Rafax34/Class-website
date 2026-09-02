@@ -473,7 +473,7 @@ function renderMembers() {
       <div class="info">
         <div class="name">${i + 1}. ${m.name}</div>
         <div class="role" data-translate="${m.roleKey}">${t(m.roleKey)}</div>
-        <a href="member/${slug(m.name)}" class="member-view-btn"><span>View</span></a>
+        <a href="#" class="member-view-btn" aria-disabled="true" tabindex="-1"><span>View (coming soon)</span></a>
       </div>
     </article>
   `).join('');
