@@ -151,6 +151,19 @@ section { padding-bottom: 4.5rem; }
   border-color: var(--accent);
   box-shadow: var(--shadow-lg), 0 0 28px rgba(0, 212, 170, 0.22);
 }
+.hero__avatar-placeholder {
+  width: 176px;
+  height: 176px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: var(--bg-elevated);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
 
 .hero__name {
   font-family: var(--font-heading);

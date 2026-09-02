@@ -128,6 +128,24 @@ const translations = {
   'ach-milestone': { id: 'Momen Penting', en: 'Milestone' },
   'ach-certificate': { id: 'Sertifikat', en: 'Certificate' },
 
+  // Schedule headers
+  'sched-time': { id: 'Waktu / Hari', en: 'Time / Day' },
+  'sched-mon': { id: 'Sen', en: 'Mon' },
+  'sched-tue': { id: 'Sel', en: 'Tue' },
+  'sched-wed': { id: 'Rab', en: 'Wed' },
+  'sched-thu': { id: 'Kam', en: 'Thu' },
+  'sched-fri': { id: 'Jum', en: 'Fri' },
+
+  // Marquee
+  'marquee-structure': { id: 'Struktur Kelas', en: 'Class Structure' },
+  'marquee-rules': { id: 'Aturan', en: 'Rules' },
+  'marquee-schedule': { id: 'Jadwal', en: 'Schedule' },
+  'marquee-teachers': { id: 'Guru', en: 'Teachers' },
+  'marquee-cleaning': { id: 'Piket', en: 'Cleaning' },
+  'marquee-homework': { id: 'PR', en: 'Homework' },
+  'marquee-members': { id: 'Anggota', en: 'Members' },
+  'marquee-memory': { id: 'Kenangan', en: 'Memory' },
+
   // Interactive tools
   'tool-student': { id: 'Acak Siswa', en: 'Student Picker' },
   'tool-student-desc': { id: 'Pilih nama teman sekelas secara acak', en: 'Pick a random classmate' },
@@ -370,6 +388,15 @@ function renderRules() {
 }
 
 function renderSchedule() {
+  const thead = document.querySelector('#scheduleTable thead tr');
+  thead.innerHTML = `
+    <th data-translate="sched-time">${t('sched-time')}</th>
+    <th data-translate="sched-mon">${t('sched-mon')}</th>
+    <th data-translate="sched-tue">${t('sched-tue')}</th>
+    <th data-translate="sched-wed">${t('sched-wed')}</th>
+    <th data-translate="sched-thu">${t('sched-thu')}</th>
+    <th data-translate="sched-fri">${t('sched-fri')}</th>
+  `;
   const tbody = document.querySelector('#scheduleTable tbody');
   tbody.innerHTML = scheduleData.map(row => `
     <tr>
@@ -701,8 +728,8 @@ function setLastUpdated() {
 function renderMarquee() {
   const track = document.getElementById('marqueeTrack');
   if (!track) return;
-  const words = ['Struktur Kelas', 'Aturan', 'Jadwal', 'Guru', 'Piket', 'PR', 'Anggota', 'Kenangan'];
-  const half = words.map(w => `<span>${w} <b class="mark">XD</b></span>`).join('');
+  const keys = ['marquee-structure', 'marquee-rules', 'marquee-schedule', 'marquee-teachers', 'marquee-cleaning', 'marquee-homework', 'marquee-members', 'marquee-memory'];
+  const half = keys.map(k => `<span>${t(k)} <b class="mark">XD</b></span>`).join('');
   // Duplicate for a seamless -50% loop
   track.innerHTML = half + half;
 }
@@ -777,6 +804,7 @@ function initLangToggle() {
     renderEvents();
     renderAchievements();
     renderTools();
+    renderMarquee();
     initTools();
 
     // Re-init scroll animations + micro interactions for new elements

@@ -143,6 +143,7 @@ button { font: inherit; background: none; border: none; cursor: pointer; }
   }
   .nav-links-wrap.open { display: flex; }
   .nav-links {
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
     width: 100%;
   }
