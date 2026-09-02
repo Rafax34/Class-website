@@ -434,6 +434,10 @@ function renderHomework() {
   `).join('');
 }
 
+function slug(name) {
+  return name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+}
+
 function renderMembers() {
   const container = document.getElementById('membersGrid');
   container.innerHTML = membersData.map((m, i) => `
@@ -442,7 +446,7 @@ function renderMembers() {
       <div class="info">
         <div class="name">${i + 1}. ${m.name}</div>
         <div class="role" data-translate="${m.roleKey}">${t(m.roleKey)}</div>
-        <a href="members-profile/${encodeURIComponent(m.name)}/index.html" class="member-view-btn"><span>View</span></a>
+        <a href="member/${slug(m.name)}" class="member-view-btn"><span>View</span></a>
       </div>
     </article>
   `).join('');
