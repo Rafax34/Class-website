@@ -472,7 +472,6 @@ function renderMembers() {
       <div class="photo" aria-hidden="true">${m.photo ? `<img src="${m.photo}" alt="">` : m.name}</div>
       <div class="info">
         <div class="name">${i + 1}. ${m.name}</div>
-        <div class="role" data-translate="${m.roleKey}">${t(m.roleKey)}</div>
         <a href="#" class="member-view-btn" aria-disabled="true" tabindex="-1"><span>View</span></a>
       </div>
     </article>
