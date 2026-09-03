@@ -174,7 +174,7 @@ const orgData = [
   { roleKey: 'role-homeroom', name: 'Lisa Febriandini S.Pd.Gr', photo: 'assets/images/Class-Structure/Wali kelas.jpeg' },
   { roleKey: 'role-president', name: 'Asyifha Dwiharti', photo: 'assets/images/Class-Structure/Ketua kelas-Asyifha Dwiharti.jpeg' },
   { roleKey: 'role-vice', name: 'Usman', photo: 'assets/images/Class-Structure/Wakil Ketua-Usman.jpeg' },
-  { roleKey: 'role-secretary', name: 'Mutiara Revina Kurniawan', photo: null },
+  { roleKey: 'role-secretary', name: 'Mutiara Revina Kurniawan', photo: 'assets/images/Class-Structure/Mutiara Revina Kurniawan.jpg' },
   { roleKey: 'role-secretary', name: 'Devita Maharani', photo: 'assets/images/Class-Structure/Sekretaris-Devita Maharani.jpeg' },
   { roleKey: 'role-treasurer', name: 'Fartillah Suci Zaskhia', photo: 'assets/images/Class-Structure/Bendahara-Fartillah Suci Zaskia.jpeg' },
   { roleKey: 'role-treasurer', name: 'Indah Amelia', photo: 'assets/images/Class-Structure/Bendahara-Indah.png' },
@@ -183,9 +183,9 @@ const orgData = [
   { roleKey: 'role-cleaning', name: 'Rista Istiqomah', photo: 'assets/images/Class-Structure/seksi kebersihan-Rista Istiqomah.jpeg' },
   { roleKey: 'role-cleaning', name: 'Muhammad Baihaqi Akram', photo: 'assets/images/Class-Structure/seksi kebersihan-M. Baihaqi Akram.jpeg' },
   { roleKey: 'role-cleaning', name: 'Hari Kurniawan', photo: 'assets/images/Class-Structure/seksi kebersihan-Hari Kurniawan.jpeg' },
-  { roleKey: 'role-medsos', name: 'Alin Qistina Ningabhia', photo: null },
+  { roleKey: 'role-medsos', name: 'Alin Qistina Ningabhia', photo: 'assets/images/Class-Structure/Alin Qistina Ningabhia.jpg' },
   { roleKey: 'role-medsos', name: 'Muhammad Deron Phaedra Al-Bahy', photo: 'assets/images/Class-Structure/Tim Medsos-M. Deron.jpeg' },
-  { roleKey: 'role-medsos', name: 'Alvina Angelicha Nhovarinda', photo: null },
+  { roleKey: 'role-medsos', name: 'Alvina Angelicha Nhovarinda', photo: 'assets/images/Class-Structure/Alvina Angelicha Nhovarinda.jpg' },
 ];
 
 const rulesData = [
